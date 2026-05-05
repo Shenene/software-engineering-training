@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cats</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_upward" />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- ⁡⁣⁢⁡⁣⁢⁡⁣⁢⁢H E A D I N G⁡⁡ -->
+    <header id="top">
+      <h1 id="mainHeading">CAT CAFE</h1>
+    </header>
+
+    <!-- ⁡⁣⁢⁡⁣⁢⁡⁣⁢⁢I M A G E S⁡ -->
+    <div class="background-wrapper">
+      <section class="main-layout">
+        <!-- ⁡⁣⁢⁢N A V I G A T I O N⁡ -->
+        <div class="page-wrapper">
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="cats.html" class="active" aria-current="page">Cats</a></li>
+              <li><a href="#">Cafe</a></li>
+            </ul>
+          </nav>
+
+          <div class="img-wrapper">
+            <div class="img-container img-container-2">
+              <div class="img-card img-card-selected">
+                <div class="cat-card" data-name="Flower">
+                  <h2 class="cat-name">Click to reveal name</h2>
+                  <img class="cat-img" src="images/Cats/Flower.jpg" alt="Flower the Cat" />
+                </div>
+              </div>
+            </div>
+
+            <div class="img-container img-container-2">
+              <div class="img-card img-card-selected">
+                <div class="cat-card" data-name="Lavender">
+                  <h2 class="cat-name">Click to reveal name</h2>
+                  <img class="cat-img" src="images/Cats/Lavender.jpg" alt="Flower the Cat" />
+                </div>
+              </div>
+            </div>
+
+            <div class="img-container img-container-2">
+              <div class="img-card img-card-selected">
+                <div class="cat-card" data-name="Beetle">
+                  <h2 class="cat-name">Click to reveal name</h2>
+                  <img class="cat-img" src="images/Cats/Beetle.jpg" alt="Flower the Cat" />
+                </div>
+              </div>
+            </div>
+
+            <div class="img-container img-container-2">
+              <div class="img-card img-card-selected">
+                <div class="cat-card" data-name="Midnight">
+                  <h2 class="cat-name">Click to reveal name</h2>
+                  <img class="cat-img" src="images/Cats/Midnight.jpg" alt="Flower the Cat" />
+                </div>
+              </div>
+            </div>
+
+            <div class="img-container img-container-2">
+              <div class="img-card img-card-selected">
+                <div class="cat-card" data-name="Galaxy">
+                  <h2 class="cat-name">Click to reveal name</h2>
+                  <img class="cat-img" src="images/Cats/Galaxy.jpg" alt="Flower the Cat" />
+                </div>
+              </div>
+            </div>
+
+            <div class="img-container img-container-2">
+              <div class="img-card img-card-selected">
+                <div class="cat-card" data-name="Smudge">
+                  <h2 class="cat-name">Click to reveal name</h2>
+                  <img class="cat-img" src="images/Cats/Smudge.jpg" alt="Flower the Cat" />
+                </div>
+              </div>
+            </div>
+
+            <div class="img-container img-container-2">
+              <div class="img-card img-card-selected">
+                <div class="cat-card" data-name="Luna">
+                  <h2 class="cat-name">Click to reveal name</h2>
+                  <img class="cat-img" src="images/Cats/Luna.jpg" alt="Flower the Cat" />
+                </div>
+              </div>
+            </div>
+
+            <div class="img-container img-container-2">
+              <div class="img-card img-card-selected">
+                <div class="cat-card" data-name="Guss">
+                  <h2 class="cat-name">Click to reveal name</h2>
+                  <img class="cat-img" src="images/Cats/Guss.jpg" alt="Flower the Cat" />
+                </div>
+              </div>
+            </div>
+
+            <div class="img-container img-container-2">
+              <div class="img-card img-card-selected">
+                <div class="cat-card" data-name="Nugget">
+                  <h2 class="cat-name">Click to reveal name</h2>
+                  <img class="cat-img" src="images/Cats/Nugget.jpg" alt="Flower the Cat" />
+                </div>
+              </div>
+            </div>
+
+            <div class="img-container img-container-2">
+              <div class="img-card img-card-selected">
+                <div class="cat-card" data-name="Gizmo">
+                  <h2 class="cat-name">Click to reveal name</h2>
+                  <img class="cat-img" src="images/Cats/Gizmo.jpg" alt="Flower the Cat" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <a href="#top" id="back-to-top" class="btn btn-secondary">Back to top <span class="material-symbols-outlined"> arrow_upward </span></a>
+
+    <!-- ⁡⁣⁢⁢F O O T E R⁡ -->
+    <footer>
+      <p>@copyright 2050 by nobody. all rights reversed</p>
+    </footer>
+
+    <!-- --------------------------------------------------------------------------------------- -->
+    <script>
+      const catCards = document.querySelectorAll(".cat-card");
+      const defaultText = "Click to reveal name";
+
+      // using the forEach function
+      catCards.forEach(function (card) {
+        const heading = card.querySelector(".cat-name");
+
+        // Start each card with this
+        heading.textContent = defaultText;
+
+        card.addEventListener("click", function () {
+          // Get value from data-name
+          const name = card.dataset.name;
+
+          if (heading.textContent === name) {
+            heading.textContent = defaultText;
+            return;
+          }
+
+          // Reset all cards first
+          catCards.forEach(function (catItem) {
+            const headingEl = catItem.querySelector(".cat-name");
+            headingEl.textContent = defaultText;
+          });
+
+          heading.textContent = name;
+        });
+      });
+    </script>
+  </body>
+</html>

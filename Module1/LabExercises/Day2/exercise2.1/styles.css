@@ -1,0 +1,415 @@
+/* ⁡⁣⁢⁢G L O B A L⁡ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+} */
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  background-color: #d9edc8;
+}
+
+/* hr {
+  margin: 2rem;
+} */
+
+/* Divider Lines */
+.divider {
+  height: 1px;
+  background: #6e665c;
+  opacity: 0.4;
+  margin: 2rem 0;
+}
+
+.divider-top {
+  margin-top: 0;
+}
+
+h2 {
+  margin: 1.5rem 1rem;
+}
+
+h3 {
+  margin: 1rem;
+}
+
+p {
+  margin: 1.5rem;
+}
+
+/* BUTTONS */
+/* Shared Button Class */
+.btn {
+  padding: 0.625rem 1rem;
+  border-radius: 0.375rem;
+  border: none;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.15s ease,
+    background-color 0.15s ease;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: #2e798a;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: #40b1d0;
+}
+
+/* Button Hover State */
+.btn:hover {
+  background-color: #dbe04d;
+  transform: translate(-4px, -2px);
+}
+
+#order-Btn {
+  margin-left: 1rem;
+}
+
+/* Click to view our cats... */
+#view-btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  /* z-index: 1; */
+}
+
+/* Spinner */
+.loading {
+  display: inline-block;
+  opacity: 0.6;
+  /* pointer-events: none; */
+}
+
+.spinner {
+  display: none;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  border: 2px solid #24575f;
+  border-top: 2px solid #dbe04d;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ------------------------------------------------------------- */
+
+header {
+  background-color: #24575f;
+  color: white;
+  text-align: center;
+  padding: 1.25rem;
+  letter-spacing: 1rem;
+}
+
+#mainHeading:hover {
+  color: #dbe04d;
+}
+
+/* ⁡⁣⁢⁢N A V I G A T I O N⁡ */
+nav {
+  background-image: linear-gradient(to bottom, #399da1, #dbe04d);
+  /* width: 30%; */
+  flex: 1;
+  /* height: 18.75rem; */
+  padding: 1.25rem;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  margin-left: 1rem;
+}
+
+nav li {
+  line-height: 3rem;
+}
+
+nav a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #434343;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+nav a.active {
+  color: #dbe04d;
+  font-weight: 700;
+  border-bottom: 2px solid #dbe04d;
+}
+
+nav a:hover {
+  color: #555555;
+  transform: translateY(-2);
+  cursor: pointer;
+}
+
+/* ⁡⁣⁢⁢A R T I C L E⁡ */
+.main-layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* aside {
+  clear: both;
+} */
+/* Not using floats */
+
+article {
+  background-color: #f5f3ef;
+  /* width: 70%; */
+  flex: 3;
+  padding: 1.25rem;
+}
+
+/* Cat Images */
+.cat-img {
+  width: 300px;
+  height: auto;
+  border-radius: 0.31rem;
+  padding: 20px;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  background-color: #d9edc8;
+  position: relative;
+}
+
+.img-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  width: 320px;
+  height: 400px;
+  overflow: hidden;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 0.31rem;
+  object-fit: cover;
+}
+
+.img-heading {
+  margin-bottom: 0.4rem;
+  position: absolute;
+  top: 82%;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #f5f3ef;
+  padding-bottom: 2.5rem;
+}
+
+/* ⁡⁣⁢⁢F O R M⁡ */
+.order-section {
+  padding: 1rem;
+}
+
+.form-group {
+  margin-inline: 1rem;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+input {
+  width: 100%;
+  max-width: 18.75rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+}
+
+/* ⁡⁣⁢⁢A S I D E⁡ */
+aside {
+  padding-inline: 1rem;
+}
+
+/* Back to top button */
+#back-to-top {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  position: fixed;
+  bottom: 3rem;
+  right: max(1rem, calc((100vw - 1200px) / 2 + 1rem));
+
+  /* decided not to center the button */
+  /* left: 50%;
+  transform: translateX(-50%); */
+  z-index: 1000;
+}
+
+#back-to-top .material-symbols-outlined {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+aside ul {
+  list-style: none;
+  margin-left: 1rem;
+  padding: 0;
+}
+
+aside li {
+  margin-bottom: 0.5rem;
+}
+
+aside a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #434343;
+}
+
+aside a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #555555;
+  transform: translateX(3px);
+}
+
+/* ⁡⁣⁢⁢F O O T E R⁡ */
+footer {
+  background-color: #24575f;
+  color: #eee;
+  text-align: center;
+  padding: 0.5rem;
+  /* margin-top: 5rem; */
+  font-size: 0.9rem;
+}
+
+/* ---------------------------------------------- */
+/* ⁡⁣⁢⁡⁣⁢⁢CATS.HTML SCREEN⁡⁡ */
+.background-wrapper {
+  background-color: #f5f3ef;
+  border: none;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  padding-left: 0px;
+}
+
+.cat-name {
+  position: absolute;
+  top: 82%;
+  left: 14%;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.img-card-selected {
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  height: 390px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.img-card-selected:hover {
+  transform: translate(-2px -2px);
+
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: calc(1200px - 320px);
+  padding: 1.25rem;
+  /* column-gap: 40px; */
+}
+
+.page-wrapper {
+  display: flex;
+  flex: 2;
+}
+
+.img-container-2 {
+  padding: 15px;
+}
+
+/* --------------------------------------------------------------- */
+
+/* ⁡⁢⁢⁣M E D I A   Q U E R I E S⁡⁡ */
+
+/* 920px tablet */
+/* @media (max-width: 920px) {
+
+} */
+
+/* 550px mobile */
+@media (max-width: 550px) {
+  .page-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-container-2 {
+    padding: 20px 50px;
+  }
+}
+
+/* 390px mobile */
+@media (max-width: 390px) {
+  /* .page-wrapper {
+    display: flex;
+    flex-direction: column;
+  } */
+
+  .img-wrapper {
+    width: 70%;
+  }
+}

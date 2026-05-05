@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cat Cafe</title>
+    <link href="styles.css" rel="stylesheet" />
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_upward" />
+    <!-- <script src="script.js" defer></script> -->
+  </head>
+
+  <body>
+    <!-- ⁡⁣⁢⁢H E A D I N G⁡ -->
+    <header id="top">
+      <h1 id="mainHeading">CAT CAFE</h1>
+    </header>
+
+    <section class="main-layout">
+      <!-- ⁡⁣⁢⁢N A V I G A T I O N⁡ -->
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="cats.html">Cats</a></li>
+          <li><a href="#">Cafe</a></li>
+        </ul>
+      </nav>
+
+      <!-- ⁡⁣⁢⁢A R T I C L E⁡ -->
+      <article>
+        <div class="img-container">
+          <div class="img-card">
+            <h2 class="img-heading">Fizz</h2>
+            <img class="cat-img" src="images/Cats/Fizz.jpg" alt="Fizz the Cat" />
+          </div>
+        </div>
+
+        <div class="img-container">
+          <div class="img-card">
+            <h2 class="img-heading">Peanut</h2>
+            <img class="cat-img" src="images/Cats/Peanut.jpg" alt="Peanut the Cat" />
+          </div>
+        </div>
+
+        <div class="img-container">
+          <div class="img-card">
+            <h2 class="img-heading">Fudge</h2>
+            <img class="cat-img" src="images/Cats/Fudge.jpg" alt="Fudge the Cat" />
+          </div>
+        </div>
+
+        <!-- <p>View our cats</p> -->
+        <a class="btn btn-secondary" id="view-btn" href="cats.html">Click to view our cats...<span id="spinner" class="spinner"></span></a>
+      </article>
+    </section>
+
+    <!--⁡⁣⁢⁢F O R M⁡-->
+    <div class="content-wrapper">
+      <div class="divider divider-top"></div>
+
+      <section class="order-section">
+        <h2>ORDER CAT PRODUCTS</h2>
+        <h3>Shipping Details</h3>
+
+        <form id="orderForm">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input id="fullName" type="text" placeholder="Add full name here" required />
+          </div>
+
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input id="address" type="text" placeholder="Add address here" required />
+          </div>
+
+          <button type="button" id="order-Btn" class="btn btn-primary">Order Now</button>
+        </form>
+      </section>
+
+      <!-- <br /><br />
+    <p id="demo">Change Color</p>
+    <button id="helloBtn">Hello</button> -->
+
+      <div class="divider"></div>
+
+      <!-- ⁡⁣⁢⁢A S I D E⁡ -->
+      <aside>
+        <h2>Related</h2>
+        <ul>
+          <li><a href="#">About the Cafe</a></li>
+          <li><a href="#">About the Cats</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <!-- <p>I am normal</p>
+    <p style="color: purple">I am red</p>
+    <p style="color: green">I am green</p>
+    <p style="color: blue">I am grey blue</p>
+    <br /> -->
+
+    <a href="#top" id="back-to-top" class="btn btn-secondary">Back to top <span class="material-symbols-outlined"> arrow_upward </span></a>
+
+    <!-- ⁡⁣⁢⁢F O O T E R⁡ -->
+    <footer>
+      <p>@copyright 2050 by nobody. all rights reversed</p>
+    </footer>
+
+    <script>
+      "use strict";
+      // function helloWorld() {
+      //   document.getElementById("demo").style.color = "red";
+      // }
+
+      // const button = document.getElementById("helloBtn");
+      // button.addEventListener("click", helloWorld);
+
+      //
+
+      // ⁡⁢⁢⁣ORDER BUTTON FUNCTION⁡
+      const orderButton = document.getElementById("order-Btn");
+
+      orderButton.addEventListener("click", function () {
+        alert("Your order will be shipped soon.");
+      });
+
+      //
+      // ⁡⁢⁢⁣VIEW BUTTON⁡
+      const viewBtnEl = document.getElementById("view-btn");
+      const spinnerEl = document.getElementById("spinner");
+
+      viewBtnEl.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        // Text Change
+        viewBtnEl.textContent = "Thanks for viewing 😺...";
+
+        viewBtnEl.appendChild(spinnerEl); // re-add spinner
+        spinnerEl.style.display = "inline-block";
+        // // Loading state
+        // viewBtnEl.classList.add("loading");
+
+        // Time
+        setTimeout(() => {
+          window.location.href = "cats.html";
+        }, 2000);
+      });
+    </script>
+  </body>
+</html>
