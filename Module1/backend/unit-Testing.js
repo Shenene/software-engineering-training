@@ -143,7 +143,7 @@ function sum(a, b) {
 //
 console.log("\n");
 //
-// ⁡⁣⁢⁢--- U N I T   T E S T I N G --⁡-⁡
+// ⁡⁣⁢⁢--- U N I T   T E S T I N G --⁡⁣⁢⁢-⁡⁡
 // This function takes a name and returns a greeting string.
 
 if (greet("Shenene") !== "Hello Shenene") {
