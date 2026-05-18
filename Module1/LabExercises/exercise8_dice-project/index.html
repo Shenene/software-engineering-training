@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Project</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="src/ui/script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="background-container">
+      <h1>Dice Game</h1>
+
+      <!-- ⁡⁣⁢⁢G A M E   I N F O⁡ -->
+      <p>The dice game is played as follows:</p>
+
+      <ol>
+        <li><span>Select your dice.</span></li>
+        <li><span>Click the Roll button.</span></li>
+        <li><span>The results will appear in the results panel below.</span></li>
+      </ol>
+
+      <!-- ⁡⁣⁢⁢D I C E   S E L E C T O R⁡ -->
+      <section>
+        <h2>Dice Selector</h2>
+        <div id="dice-selector-bg">
+          <div class="button-wrapper">
+            <button type="button" id="dice-type-1">D6</button>
+            <button type="button" id="dice-type-2">D10</button>
+            <button type="button" id="dice-type-3">D12</button>
+            <button type="button" id="dice-type-4">D20</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ⁡⁣⁢⁢B U T T O N⁡ -->
+      <button type="button" id="btn-roll-dice" class="btn btn-roll">Roll Button</button>
+
+      <!-- ⁡⁣⁢⁢R E S U L T⁡ -->
+      <div>
+        <h3>Result</h3>
+        <div id="results-area"></div>
+      </div>
+    </div>
+  </body>
+</html>
