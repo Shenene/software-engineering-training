@@ -17,7 +17,66 @@
       </nav>
     </header>
 
-    <main></main>
+    <main>
+      <!-- ⁡⁣⁣⁡⁣⁢⁢F O R M⁡⁡ -->
+      <form method="POST" action="http://localhost:3000/profile">
+        <!-- Added fieldset and legend for accessibility (screenreaders) -->
+        <fieldset>
+          <legend>Form Information</legend>
+          <div>
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" id="first_name" placeholder="Add your first name" required />
+          </div>
+
+          <div>
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" id="last_name" placeholder="Add your last name" required />
+          </div>
+
+          <!-- ⁡⁣⁢⁢R A D I O   B U T T O N S⁡ -->
+          <div>
+            <p>Select your favourite coding language</p>
+
+            <input type="radio" id="html" name="coding_language" value="html" />
+            <label for="html">HTML</label>
+
+            <input type="radio" id="css" name="coding_language" value="css" />
+            <label for="css">CSS</label>
+
+            <input type="radio" id="javascript" name="coding_language" value="javascript" />
+            <label for="javascript">JavaScript</label>
+          </div>
+
+          <!-- ⁡⁣⁢⁡⁣⁢⁢C H E C K   B O X E S⁡⁡ -->
+          <div>
+            <p>Select your vehicle type</p>
+
+            <input type="checkbox" id="mazda" name="vehicle_type" value="Mazda" />
+            <label for="mazda">Mazda</label>
+
+            <input type="checkbox" id="toyota" name="vehicle_type" value="Toyota" />
+            <label for="toyota">Toyota</label>
+
+            <input type="checkbox" id="honda" name="vehicle_type" value="Honda" />
+            <label for="honda">Honda</label>
+          </div>
+        </fieldset>
+
+        <!-- ⁡⁣⁢⁢D R O P   D O W N   M E N U⁡⁡ -->
+        <div>
+          <label for="car_brand">Choose your car brand</label>
+
+          <select id="car_brand" name="car_brand">
+            <option value="">Please select a car brand</option>
+            <option value="maserati">Maserati</option>
+            <option value="ferarri">Ferrari</option>
+            <option value="porsche">Porsche</option>
+          </select>
+        </div>
+
+        <button type="submit">Submit form</button>
+      </form>
+    </main>
 
     <footer>Copyright &copy; 2024</footer>
   </body>
