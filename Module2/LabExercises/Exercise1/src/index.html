@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Shop cosy cat beds, pet bedding, and other small pet accessories" />
+    <meta name="keywords" content="cats, cat beds, pet bedding, pet accessories" />
+    <meta name="author" content="Pet house" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My New Practice Page</title>
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" type="image/png" href="#" /> -->
+
+    <!-- Google Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=arrow_upward&display=block" />
+
+    <!-- ⁡⁣⁢⁢-- S T Y L E S --⁡ -->
+    <style>
+      /* global */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      html,
+      body {
+        min-height: 100%;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      img {
+        width: 200px;
+        height: 200px;
+      }
+
+      ul,
+      ol {
+        padding: 2rem 0;
+        margin-inline: 20px;
+      }
+
+      /* ------------------------------- */
+
+      .container {
+        width: min(90%, 1200px);
+        margin-inline: auto;
+      }
+    </style>
+  </head>
+
+  <!-- ------------------------------------------------------------------------------------- -->
+  <!-- ⁡⁣⁢⁢-- B O D Y --⁡ -->
+  <body id="top">
+    <header>
+      <!-- ⁡⁣⁢⁢N A V I G A T I O N⁡ -->
+      <div class="container">
+        <nav>
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="form.html">Form</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1>My HTML learning journey</h1>
+        <article>
+          <h2>Learning elements - div, span, p, pre, ul, li, ol, article</h2>
+
+          <!-- ⁡⁣⁢⁢D I V S⁡ -->
+          <div>pet beds</div>
+          <div>pet accessories</div>
+          <div>cat toys</div>
+
+          <!-- ⁡⁣⁢⁢S P A N   T A G S⁡ -->
+          <span>pet beds</span>
+          <span>pet accessories</span>
+          <span>cat toys</span>
+
+          <!-- ⁡⁣⁢⁢P A R A G R A P H S⁡ -->
+          <!-- ⁡⁣⁢⁣<p> & <pre> tags⁡ -->
+          <p>p represents paragraph without preserving spacing</p>
+          <pre>
+Text in         a pre element
+is displayed in a fixed-width
+font, and it preserves
+both      spaces and
+line breaks
+</pre
+          >
+
+          <!-- ⁡⁣⁢⁢L I S T S⁡ -->
+          <!-- ⁡⁣⁢⁣Unordered List⁡ -->
+          <ul>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+            <li>List item 4</li>
+          </ul>
+
+          <!-- ⁡⁣⁢⁣Ordered List⁡⁡⁡ -->
+          <!-- with nested ul -->
+          <ol>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <li>List item 3</li>
+            <li>
+              List item 4
+              <ul>
+                <li>Nested list item 1</li>
+                <li>Nested list item 2</li>
+              </ul>
+            </li>
+          </ol>
+        </article>
+
+        <!-- ⁡⁣⁢⁢T A B L E⁡ -->
+        <article>
+          <h2>Table</h2>
+          <table>
+            <tr>
+              <th colspan="4">table from w3 schools</th>
+            </tr>
+            <tr>
+              <th>Month</th>
+              <th colspan="3">Savings</th>
+            </tr>
+            <tr>
+              <td>new data</td>
+              <td>$300</td>
+              <td>$300</td>
+              <td rowspan="2">$300</td>
+            </tr>
+            <tr>
+              <td>January</td>
+              <td>$100</td>
+              <td>$300</td>
+            </tr>
+            <tr>
+              <td>February</td>
+              <td>$80</td>
+              <td>$300</td>
+              <td>$300</td>
+            </tr>
+          </table>
+        </article>
+
+        <!-- ⁡⁣⁢⁢I M A G E S⁡ -->
+        <article>
+          <div>
+            <h2>Images</h2>
+            <img src="https://picsum.photos/400/400" alt="random changing image" />
+            <img src="assets/html_lab_image.jpg" alt="sunset" />
+          </div>
+
+          <!-- ⁡⁣⁢⁢V I D E O⁡ -->
+          <div>
+            <video autoplay muted controls width="250">
+              <source src="/assets/flower.webm" type="video/webm" />
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+          </div>
+
+          <!-- ⁡⁣⁢⁢A U D I O⁡ -->
+          <!-- ⁡⁣⁢⁣figure & figcaption⁡ -->
+          <figure>
+            <audio autoplay muted controls src="/assets/t-rex-roar.mp3">Your browser does not support the <code>audio</code> element.</audio>
+            <figcaption>Audio example: t-rex-roar.mp3</figcaption>
+          </figure>
+        </article>
+
+        <!-- ⁡⁣⁣⁡⁣⁢⁢F O R M⁡⁡ -->
+        <form method="POST" action="http://127.0.0.1:5500/form.html">
+          <!-- Added fieldset and legend for accessibility (screenreaders) -->
+          <fieldset>
+            <legend>Form Information</legend>
+            <div>
+              <label for="first_name">First Name</label>
+              <input type="text" name="first_name" id="first_name" placeholder="Add your first name" required />
+            </div>
+
+            <div>
+              <label for="last_name">Last Name</label>
+              <input type="text" name="last_name" id="last_name" placeholder="Add your last name" required />
+            </div>
+
+            <!-- ⁡⁣⁢⁢R A D I O   B U T T O N S⁡ -->
+            <div>
+              <p>Select your favourite coding language</p>
+
+              <input type="radio" id="html" name="coding_language" value="html" />
+              <label for="html">HTML</label>
+
+              <input type="radio" id="css" name="coding_language" value="css" />
+              <label for="css">CSS</label>
+
+              <input type="radio" id="javascript" name="coding_language" value="javascript" />
+              <label for="javascript">JavaScript</label>
+            </div>
+
+            <!-- ⁡⁣⁢⁡⁣⁢⁢C H E C K   B O X E S⁡⁡ -->
+            <div>
+              <p>Select your vehicle type</p>
+
+              <input type="checkbox" id="mazda" name="vehicle_type" value="Mazda" />
+              <label for="mazda">Mazda</label>
+
+              <input type="checkbox" id="toyota" name="vehicle_type" value="Toyota" />
+              <label for="toyota">Toyota</label>
+
+              <input type="checkbox" id="honda" name="vehicle_type" value="Honda" />
+              <label for="honda">Honda</label>
+            </div>
+          </fieldset>
+
+          <!-- ⁡⁣⁢⁢D R O P   D O W N   M E N U⁡⁡ -->
+          <div>
+            <label for="car_brand">Choose your car brand</label>
+
+            <select id="car_brand" name="car_brand">
+              <option value="">Please select a car brand</option>
+              <option value="maserati">Maserati</option>
+              <option value="ferarri">Ferrari</option>
+              <option value="porsche">Porsche</option>
+            </select>
+          </div>
+
+          <button type="submit">Submit form</button>
+        </form>
+
+        <!-- ⁡⁣⁢⁢B A C K   T O   T O P⁡ -->
+
+        <a href="#top" class="back-to-top">Back to top <span class="material-symbols-outlined"> arrow_upward</span></a>
+      </div>
+    </main>
+
+    <!-- ⁡⁣⁢⁢F O O T E R⁡ -->
+    <div class="container">
+      <footer>Copyright &copy; 2024</footer>
+    </div>
+  </body>
+</html>
