@@ -1,0 +1,186 @@
+/* I. Selectors */
+/* Put styles for questions 1.1, 1.2, 1.3 and 1.4 here */
+/* Type selector */
+article {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+/* I decided to use the w3 schools color converter so I can use hex instead */
+/* Class selector */
+.style-me1 {
+  color: #ff0000;
+}
+
+/* id selector */
+/* Noticed ids used multiple times in the HTML - from the course exercise it mentions used for simplicity of the exercise only */
+#style-me2 {
+  color: #0000ff;
+}
+
+/* Specific selector */
+#style-me2.style-me1 {
+  color: #800080;
+}
+
+/* Put styles for questions 2.1 and 2.2 here */
+/* Descendant combinator */
+.my-descendants-are-styled p {
+  background-color: #ff0000;
+}
+
+/* Child combinator */
+.my-children-are-styled > p {
+  background-color: #90ee90;
+}
+
+/* II. Box model and common properties */
+/* Put styles for questions 1-8 here */
+.box {
+  background-color: #add8e6;
+  /* 
+  -- Top & bottom --
+  margin-block: 20px;
+  
+  -- left & right --
+  margin-inline: 10px; 
+  */
+
+  /* 
+  -- Individual but same outcome as above --
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px; 
+  */
+
+  /* 
+  -- 2 value - First value is Top/bottom & Second value is left/right --
+  margin: 20px auto; 
+  */
+
+  /* 
+  -- Same as above - another 2 value - Top/bottom & left/right --
+  margin: 20px 10px; 
+  */
+
+  /* 
+  -- 4 value - Top/right/bottom/left --
+  margin: 20px 10px 20px 10px; 
+  */
+
+  /* 
+  -- 1 value - margin all-round --
+  margin: 20px; // 1.25rem 
+  */
+
+  /* margin: 2em; */
+
+  /* margin: 5%; */
+
+  /* padding: 5%; */
+
+  padding: 20px;
+  /* I know I can also use the same methods as above, but for padding instead */
+
+  /* ------------------------------------------------------------------------ */
+  /* -- Width & Heigth -- */
+  /* width: 500px;
+  height: auto; */
+
+  /* width: 80vw;
+  height: 100%; */
+
+  /* width: 20rem;
+  height: auto; */
+
+  /* width: 40rem;
+  height: 10vh; */
+
+  /* width: 50%;
+  height: 50%; */
+
+  /* width: 30vw;
+  height: 30vh !important; */
+
+  /* ------------------------------------------------------------------------ */
+  /* -- Border -- */
+  /* border: 1px solid blue; */
+  /* border: 2px dashed blue; */
+  /* border: 4px dotted purple; */
+  /* border: 2px double yellow; */
+  /* border: none; */
+  /* border: 10px solid orange; */
+
+  /* ------------------------------------------------------------------------ */
+  /* -- Overflow -- */
+  /* width: 200px;
+  height: 150px;
+  overflow: visible;
+  overflow: hidden;
+  overflow: auto;
+  overflow: scroll; */
+
+  /* ------------------------------------------------------------------------ */
+  /* -- border vs outline -- */
+  /* border: 10px solid blue; */
+  /* outline: 10px solid blue; */
+
+  /* ------------------------------------------------------------------------ */
+  /* -- border radius -- */
+  /* border-radius: 8px;
+  border-radius: 16px;
+  border-radius: 24px;
+  border-radius: 1rem;
+  border-radius: 1em; */
+
+  /* width: 200px;
+  height: 200px;
+  border: 2px solid blue;
+  border-radius: 50%;
+  padding: 50px;
+  overflow: hidden; */
+
+  /* ------------------------------------------------------------------------ */
+  /* -- Background Image -- */
+
+  background-image: url("../assets/images/img1.png");
+  background-size: cover;
+  /* background-size: contain; */
+  /* background-size: auto; */
+
+  /* background-repeat: no-repeat; */
+  /* background-repeat: repeat; */
+
+  /* background-position: center; */
+}
+/* ------------------------------------------------------------------------ */
+/* -- Box Sizing -- */
+article {
+  /* width: 500px;
+  height: auto;
+  padding: 20px;
+  border: 5px solid black;
+  margin: 20px 0; */
+  /* box-sizing: border-box; */
+}
+
+/* III. Positioning */
+/* Put styles for questions 1-3 here */
+.position-absolute {
+  /* background-color: blueviolet; */
+  /* position: absolute; */
+  /* top: 0; */
+  /* bottom: 0; */
+  /* top: 5%; */
+}
+
+/* IV. Styling text */
+/* Put styles for questions 1-10 here */
+
+/* V. Styling links */
+/* Put styles for questions 1-3 here */
+
+/* VI. calc() */
+/* Put styles for questions 1-3 here */
