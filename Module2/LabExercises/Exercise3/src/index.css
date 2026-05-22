@@ -1,0 +1,210 @@
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: purple;
+}
+
+.background-1 {
+  background: #68b0ab;
+}
+
+.background-2 {
+  background: #8fc0a9;
+}
+
+.background-3 {
+  background: #c8d5b9;
+}
+.background-3-1 {
+  background: #c8d5b9;
+}
+
+.background-4 {
+  background: #faf3dd;
+}
+
+.m-20 {
+  margin: 20px;
+}
+
+.h-80 {
+  min-height: 80px;
+}
+
+.h-400 {
+  height: 400px;
+}
+
+.w-80 {
+  width: 80px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-item-1 {
+  flex: 1;
+}
+.flex-item-2 {
+  flex: 2;
+}
+.flex-item-3 {
+  flex: 3;
+}
+.flex-item-4 {
+  flex: 4;
+}
+/* flex 4 will take up the most space */
+.flex-center {
+  justify-content: flex-start;
+  align-items: center;
+}
+.flex-center {
+  justify-content: flex-end;
+  align-items: center;
+}
+.flex-center {
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+.flex-center {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-space-between {
+  justify-content: space-evenly;
+  justify-content: space-around;
+  justify-content: space-between;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* .flex-basis-item-50,
+.flex-wrap {
+  flex-wrap: wrap-reverse;
+} */
+
+/* .flex-basis-item-50 {
+  flex-basis: 50%;
+}
+
+.flex-basis-item-50 {
+  flex-basis: 25%;
+} */
+
+/* .flex-container {
+  flex-direction: row; 
+  flex-direction: row-reverse;
+  flex-direction: column;
+  flex-direction: column-reverse;
+} */
+
+.flex-menu {
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  padding: 0 2px;
+  gap: 2px;
+  height: 50px;
+}
+
+.flex-menu a {
+  margin: 12px 16px;
+  padding: 12px;
+  color: black;
+  font-weight: 700;
+}
+
+.background-3 {
+  height: 100%;
+  align-content: center;
+}
+
+/* .fourth-item {
+  order: 5;
+} */
+
+.flex-menu li {
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* .flex-container {
+  display: inline-flex;
+
+  flex-direction: row-reverse;
+  flex-direction: column;
+  flex-direction: column-reverse;
+
+  flex-wrap: nowrap;
+  flex-wrap: wrap-reverse;
+  flex-wrap: wrap;
+
+  justify-content: flex-start;
+  justify-content: flex-end;
+  justify-content: center;
+  justify-content: space-between;
+  justify-content: space-around;
+  justify-content: space-evenly;
+
+  align-items: stretch;
+  align-items: flex-start;
+  align-items: flex-end;
+  align-items: center;
+  align-items: baseline;
+} */
+
+/* .flex-container {
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-content: flex-end;
+  align-content: center;
+  align-content: space-between;
+  align-content: space-around;
+  align-content: stretch;
+
+  flex-flow: column wrap;
+  flex-flow: row wrap;
+} */
+
+/* .flex-wrap {
+  height: 200px;
+  gap: 20px;
+}
+
+.flex-basis-item-50 {
+  flex-grow: 1;
+  flex-shrink: 2;
+  flex-basis: auto;
+  flex-basis: 200px;
+  flex: 0 0 45%;
+  align-self: auto;
+  align-self: flex-start;
+  align-self: flex-end;
+  align-self: center;
+  align-self: baseline;
+  align-self: stretch;
+
+  flex: none;
+  flex: 0 0 200px;
+} */
+
+/* .third-item {
+  order: 3;
+} */
+
+/* .flex-container > div {
+  flex-basis: 40%;
+} */
