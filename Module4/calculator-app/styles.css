@@ -1,0 +1,109 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ----------------------------------------------------- */
+
+:root {
+  /* =========================================
+     COLOURS
+  ========================================= */
+  /* Background Colours */
+  --color-primary: #7c3aed;
+  --color-primary-light: #a855f7;
+
+  --color-background: #f8f5fc;
+  --color-calculator: #dccaf2;
+
+  /* Primary Text Colour */
+  --color-text: #333333;
+
+  /* Display Screen */
+  --color-screen: #4b5563;
+  --color-screen-text: #f8fafc;
+
+  /* Buttons */
+  --color-button: #ffffff;
+  --color-button-text-number: #374151;
+  --color-button-text-clear: #000000;
+  --color-button-text-operator: #ffffff;
+}
+
+/* ----------------------------------------------------- */
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ----------------------------------------------------- */
+.calculator-wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-calculator);
+  border-radius: 12px;
+}
+
+.display {
+  height: 50px;
+  margin: 24px 24px 0 24px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: var(--color-screen);
+  color: var(--color-screen-text);
+}
+
+.calculator-body {
+  background-color: var(--color-calculator);
+  width: min(400px, 100%);
+  height: 280px;
+  padding: 24px;
+  border-radius: 12px;
+  /* margin-top: 24px; */
+  gap: 12px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.display {
+  color: var(--color-screen-text);
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.clear {
+  grid-column: span 2;
+  background-color: var(--color-primary-light);
+}
+
+.operator {
+  background-color: var(--color-primary);
+  color: var(--color-button-text-operator);
+}
+
+.number {
+  color: var(--color-button-text-number);
+}
