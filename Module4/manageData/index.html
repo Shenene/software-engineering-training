@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Data</title>
+
+    <script src="script.js" defer></script>
+  </head>
+
+  <!-- B o d y -->
+  <body>
+    <h1>News</h1>
+
+    <form id="newsForm">
+      <input type="text" id="newsTitle" placeholder="Enter news title" required />
+      <input type="text" id="newsContent" placeholder="Enter news content" required />
+      <button type="submit">Add News</button>
+    </form>
+
+    <button id="stopBtn">Stop Refreshing News</button>
+
+    <div id="newsContainer"></div>
+  </body>
+</html>
