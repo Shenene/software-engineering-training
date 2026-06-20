@@ -84,6 +84,8 @@ body {
 }
 
 .display {
+  display: flex;
+  justify-content: flex-end;
   color: var(--color-screen-text);
 }
 
