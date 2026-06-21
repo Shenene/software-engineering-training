@@ -1,0 +1,50 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animationContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.squareSlider {
+  width: 90px;
+  height: 90px;
+  background-color: #7400b8;
+  border-radius: 16px;
+  animation: slideVertical 5s linear infinite;
+}
+
+@keyframes slideVertical {
+  0% {
+    transform: translateY(0);
+    background-color: #5e60ce;
+  }
+  25% {
+    transform: translateY(150px);
+    background-color: #76c893;
+  }
+  50% {
+    transform: translateY(300px);
+    background-color: #56cfe1;
+  }
+  75% {
+    transform: translateY(450px);
+    background-color: #a3c4f3;
+  }
+  100% {
+    transform: translateY(0);
+    background-color: #7400b8;
+  }
+}
