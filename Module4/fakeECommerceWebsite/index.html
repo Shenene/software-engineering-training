@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake E Commerce Website</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+
+    <!-- Styles -->
+    <link href="styles.css" rel="stylesheet" />
+
+    <!-- Axios Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+
+    <!-- JS -->
+    <script src="script.js" defer></script>
+  </head>
+
+  <!-- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+  <body>
+    <header class="bg-dark text-white text-center py-4">
+      <h1>Fake Store</h1>
+      <p class="mb-0">Products from Fake Store API</p>
+    </header>
+
+    <main class="container my-4">
+      <div class="row g-3 mb-4">
+        <!-- Category -->
+        <div class="col-md-4">
+          <label for="categorySelect">Category</label>
+          <select id="categorySelect" class="form-select">
+            <option value="all">All Categories</option>
+          </select>
+        </div>
+
+        <!-- Search Products -->
+        <div class="col-md-4">
+          <label for="searchInput" class="form-label mb-0">Search products</label>
+          <input type="text" id="searchInput" class="form-control" placeholder="Search products..." />
+        </div>
+
+        <!-- Sort Products -->
+        <div class="col-md-4">
+          <label for="sortSelect">Sort products</label>
+          <select id="sortSelect" class="form-select">
+            <option value="default">Sort by...</option>
+            <option value="priceLowHigh">Price: Low to High</option>
+            <option value="priceHighLow">Price: High to Low</option>
+            <option value="titleAZ">Title: A to Z</option>
+            <option value="titleZA">Title: Z to A</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Display Products -->
+      <div id="productsContainer" class="row g-4"></div>
+    </main>
+  </body>
+</html>
