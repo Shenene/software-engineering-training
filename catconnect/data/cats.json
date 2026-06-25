@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "catName": "Fudge",
+    "breed": "Ragdoll",
+    "age": 4,
+    "time": "2h ago",
+    "caption": "Fudge enjoying the sunshine today!",
+    "mood": "playful",
+    "image": "assets/images/placeholder.jpg"
+  },
+  {
+    "id": 2,
+    "catName": "Fizz",
+    "breed": "Short hair",
+    "age": 3,
+    "time": "2h ago",
+    "caption": "Fizz has claimed the couch for the afternoon.",
+    "mood": "happy",
+    "image": "assets/images/placeholder.jpg"
+  }
+]
