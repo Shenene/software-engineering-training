@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CatConnect | Home Feed</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- JavaScript files -->
+    <script src="js/settings.js" defer></script>
+    <script src="js/posts.js" defer></script>
+  </head>
+
+  <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+  <body>
+    <!-- ⁡⁣⁢⁢--- M A I N   A P P   W R A P P E R ---⁡ -->
+    <div class="app-wrapper">
+      <!-- ⁡⁣⁣⁡⁣⁣⁢-- Header --⁡⁡ -->
+      <header class="app-header">
+        <div class="brand">
+          <img src="assets/icons/brand-logo.svg" alt="" aria-hidden="true" class="brand-logo" />
+
+          <h1 class="visually-hidden">CatConnect</h1>
+        </div>
+
+        <!-- ⁡⁣⁣⁢-- Opens Modal --⁡ -->
+        <button class="icon-btn" type="button" aria-label="Open settings" data-bs-toggle="modal" data-bs-target="#settingsModal">
+          <i class="bi bi-gear"></i>
+        </button>
+      </header>
+
+      <!-- ⁡⁣⁣⁢-- Search cat posts --⁡ -->
+      <section class="search-section" aria-label="Search cat posts">
+        <div class="search-box">
+          <i class="bi bi-search"></i>
+          <input type="search" id="postSearchInput" placeholder="Search cat posts..." aria-label="Search cat posts" />
+        </div>
+      </section>
+
+      <!-- ⁡⁣⁣⁢-- Featured breed card --⁡ -->
+      <section class="featured-card">
+        <div class="section-heading">
+          <i class="bi bi-star"></i>
+          <h2>Featured Breed</h2>
+        </div>
+
+        <div class="featured-content">
+          <div>
+            <h3>Ragdoll</h3>
+            <p>Gentle • Friendly • Calm</p>
+          </div>
+
+          <a href="discover.html" class="learn-more-link">
+            Learn More
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+      <!-- ⁡⁣⁣⁢-- Feed posts --⁡⁡ -->
+      <main class="feed-section">
+        <div class="section-title-row">
+          <h2>Home Feed</h2>
+        </div>
+
+        <!-- ⁡⁢⁣⁡⁢⁣⁣-- Container for post cards --⁡⁡⁡⁡ -->
+        <div id="postsContainer" class="posts-container">
+          <!-- Temporary loading text -->
+          <p class="text-muted small">Loading cat posts...</p>
+        </div>
+
+        <!-- ⁡⁢⁣⁣-- Post Card Template --⁡ -->
+        <template id="postTemplate">
+          <article class="post-card">
+            <div class="post-header">
+              <div class="avatar"></div>
+              <div>
+                <h3 class="post-cat-name"></h3>
+                <p class="post-meta">
+                  <span class="post-time"></span>
+                  <span class="post-mood"></span>
+                </p>
+              </div>
+            </div>
+            <!-- -------------------------------------- -->
+            <div class="post-image-wrapper">
+              <img class="post-image" src="" alt="" loading="lazy" />
+            </div>
+            <!-- -------------------------------------- -->
+            <p class="post-caption"></p>
+
+            <div class="post-actions" aria-label="Post actions">
+              <button type="button" aria-label="Like post">
+                <i class="bi bi-heart"></i>
+              </button>
+
+              <button type="button" aria-label="Comment on post">
+                <i class="bi bi-chat"></i>
+              </button>
+
+              <button type="button" aria-label="Share post">
+                <i class="bi bi-share"></i>
+              </button>
+
+              <button type="button" aria-label="Save post">
+                <i class="bi bi-bookmark"></i>
+              </button>
+
+              <button type="button" aria-label="View post tag">
+                <i class="bi bi-tag"></i>
+              </button>
+            </div>
+          </article>
+        </template>
+      </main>
+
+      <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+      <!-- ⁡⁣⁣⁢-- Bottom Navigation --⁡ -->
+      <nav class="bottom-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-item active" aria-current="page">
+          <i class="bi bi-house-fill"></i>
+          <span>Home</span>
+        </a>
+
+        <a href="discover.html" class="nav-item">
+          <i class="bi bi-search"></i>
+          <span>Discover</span>
+        </a>
+
+        <a href="create-post.html" class="nav-item">
+          <i class="bi bi-plus-circle"></i>
+          <span>Create</span>
+        </a>
+
+        <a href="#" class="nav-item">
+          <i class="bi bi-bell"></i>
+          <span>Activity</span>
+        </a>
+
+        <a href="profile.html" class="nav-item">
+          <i class="bi bi-person"></i>
+          <span>Profile</span>
+        </a>
+      </nav>
+    </div>
+
+    <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- ⁡⁣⁣⁢-- Settings Modal --⁡ -->
+    <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content settings-modal">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="settingsModalLabel">Settings</h2>
+
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close settings"></button>
+          </div>
+
+          <div class="modal-body">
+            <!-- ⁡⁣⁣⁢-- Appearance --⁡ -->
+            <section class="settings-section">
+              <h3>Appearance</h3>
+
+              <div class="setting-row">
+                <div>
+                  <p class="setting-title">Theme</p>
+                  <p class="setting-description">Choose how CatConnect looks.</p>
+                </div>
+
+                <button id="themeToggleBtn" class="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+                  <i class="bi bi-sun-fill"></i>
+                </button>
+              </div>
+            </section>
+
+            <!-- ⁡⁣⁣⁢-- Preferences --⁡ -->
+            <section class="settings-section">
+              <h3>Preferences</h3>
+
+              <div class="setting-row">
+                <div>
+                  <p class="setting-title">Animations</p>
+                  <p class="setting-description">Turn motion effects on or off.</p>
+                </div>
+
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="animationsToggle" aria-label="Turn animations on or off" checked />
+                </div>
+              </div>
+
+              <div class="setting-row">
+                <div>
+                  <p class="setting-title">Remember theme</p>
+                  <p class="setting-description">Save your theme choice.</p>
+                </div>
+
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="rememberThemeToggle" aria-label="Remember theme choice" checked />
+                </div>
+              </div>
+            </section>
+
+            <!-- ⁡⁣⁣⁢-- Data --⁡ -->
+            <section class="settings-section">
+              <h3>Data</h3>
+
+              <div class="setting-row">
+                <div>
+                  <p class="setting-title">Clear saved breeds</p>
+                </div>
+
+                <button id="clearSavedBreedsBtn" class="btn btn-outline-brand btn-sm" type="button">Clear</button>
+              </div>
+
+              <div class="setting-row">
+                <div>
+                  <p class="setting-title">Reset preferences</p>
+                </div>
+
+                <button id="resetPreferencesBtn" class="btn btn-outline-brand btn-sm" type="button">Reset</button>
+              </div>
+            </section>
+
+            <!-- ⁡⁣⁣⁢-- About --⁡ -->
+            <section class="settings-section">
+              <h3>About</h3>
+              <p class="setting-description mb-1">CatConnect</p>
+              <p class="setting-description mb-1">Version 1.0</p>
+              <p class="setting-description mb-0">Powered by The Cat API</p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

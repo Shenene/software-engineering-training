@@ -1,0 +1,76 @@
+/* =========================================
+   ⁡⁣⁣⁢D E S I G N   S Y S T E M⁡
+========================================= */
+
+:root {
+  /* Brand colours */
+  --color-brand: #0f766e;
+  --color-brand-hover: #115e59;
+  --color-brand-light: #f0fdfa;
+
+  /* Text colours */
+  --color-text-main: #333333;
+  --color-text-muted: #777777;
+  --color-text-light: #ffffff;
+
+  /* Background colours */
+  --color-background: #f5f7f8;
+  --color-surface: #ffffff;
+
+  /* Borders */
+  --color-border: #dddddd;
+
+  /* Feedback colours */
+  --color-success: #16a34a;
+  --color-danger: #dc2626;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-button: 0 4px 5px rgba(15, 118, 110, 0.25);
+
+  /* Motion */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.25s ease;
+
+  --transform-lift: translateY(-2px);
+
+  /* Font */
+  --font-main: "Inter", Arial, sans-serif;
+
+  /* Layout */
+  --mobile-max-width: 390px;
+  --bottom-nav-height: 64px;
+
+  /* Modal */
+  --color-modal-surface: #ffffff;
+  --color-modal-text: #333333;
+  --color-modal-muted: #666666;
+}
+
+body[data-theme="dark"] {
+  --color-background: #1f2933;
+  --color-surface: #2f3a45;
+  --color-text-main: #f8fafc;
+  --color-text-muted: #cbd5e1;
+  --color-border: #475569;
+  --color-brand-light: #134e4a;
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+  /* modal */
+  --color-modal-surface: #ffffff;
+  --color-modal-text: #333333;
+  --color-modal-muted: #666666;
+}

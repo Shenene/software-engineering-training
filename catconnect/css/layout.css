@@ -1,0 +1,88 @@
+/* Main mobile app container */
+.app-wrapper {
+  width: 100%;
+  max-width: var(--mobile-max-width);
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: var(--color-background);
+  padding: var(--space-lg);
+  padding-bottom: calc(var(--bottom-nav-height) + var(--space-lg));
+  position: relative;
+}
+
+/* Header */
+.app-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--space-lg);
+  position: relative;
+}
+
+.brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-logo {
+  width: 225px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Page title under logo */
+.page-title-section {
+  margin-bottom: var(--space-md);
+}
+
+.page-title-section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-brand);
+  margin: 0;
+}
+
+.page-title-section p {
+  margin: var(--space-xs) 0 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+/* Settings button position */
+.app-header .icon-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Main feed spacing */
+.search-section,
+.featured-card,
+.feed-section {
+  margin-bottom: var(--space-md);
+}
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* Bottom navigation */
+.bottom-nav {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: var(--mobile-max-width);
+  height: var(--bottom-nav-height);
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  z-index: 100;
+}

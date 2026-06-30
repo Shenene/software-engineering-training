@@ -3,20 +3,140 @@
     "id": 1,
     "catName": "Fudge",
     "breed": "Ragdoll",
-    "age": 4,
+    "age": 11,
     "time": "2h ago",
-    "caption": "Fudge enjoying the sunshine today!",
-    "mood": "playful",
-    "image": "assets/images/placeholder.jpg"
+    "caption": "Fudge enjoying the sunshine through the window today!",
+    "mood": "royal",
+    "image": "assets/images/fudge.jpg"
   },
   {
     "id": 2,
     "catName": "Fizz",
-    "breed": "Short hair",
-    "age": 3,
+    "breed": "Domestic Shorthair",
+    "age": 10,
     "time": "2h ago",
-    "caption": "Fizz has claimed the couch for the afternoon.",
+    "caption": "Fizz has claimed the bed for the afternoon.",
     "mood": "happy",
-    "image": "assets/images/placeholder.jpg"
+    "image": "assets/images/fizz.jpg"
+  },
+  {
+    "id": 3,
+    "catName": "Peanut",
+    "breed": "Domestic Longhair",
+    "age": 12,
+    "time": "3h ago",
+    "caption": "Peanut sleeping in today.",
+    "mood": "sleepy",
+    "image": "assets/images/peanut.jpg"
+  },
+  {
+    "id": 4,
+    "catName": "Guss",
+    "breed": "Domestic Shorthair",
+    "age": 5,
+    "time": "3h ago",
+    "caption": "Guss in a playful mood.",
+    "mood": "playful",
+    "image": "assets/images/guss.jpg"
+  },
+  {
+    "id": 5,
+    "catName": "Gizmo",
+    "breed": "Domestic Shorthair",
+    "age": 5,
+    "time": "3h ago",
+    "caption": "Enjoying the outdoors",
+    "mood": "playful",
+    "image": "assets/images/gizmo.jpg"
+  },
+  {
+    "id": 6,
+    "catName": "Nugget",
+    "breed": "Domestic Shorthair",
+    "age": 5,
+    "time": "4h ago",
+    "caption": "loves to play!",
+    "mood": "playful",
+    "image": "assets/images/nugget.jpg"
+  },
+  {
+    "id": 7,
+    "catName": "Luna",
+    "breed": "Domestic Shorthair",
+    "age": 4,
+    "time": "4h ago",
+    "caption": "We call her princess Luna, she's so cute :-)",
+    "mood": "royal",
+    "image": "assets/images/luna.jpg"
+  },
+  {
+    "id": 8,
+    "catName": "Lavender",
+    "breed": "Domestic Shorthair",
+    "age": 4,
+    "time": "4h ago",
+    "caption": "She loves sleeping in boxes.",
+    "mood": "sleepy",
+    "image": "assets/images/lavender.jpg"
+  },
+  {
+    "id": 9,
+    "catName": "Flower",
+    "breed": "Domestic Shorthair",
+    "age": 4,
+    "time": "4h ago",
+    "caption": "She's so playful and cute!",
+    "mood": "playful",
+    "image": "assets/images/flower.jpg"
+  },
+  {
+    "id": 10,
+    "catName": "Beetle",
+    "breed": "Domestic Shorthair",
+    "age": 4,
+    "time": "4h ago",
+    "caption": "Beetle posing for the camera",
+    "mood": "royal",
+    "image": "assets/images/beetle.jpg"
+  },
+  {
+    "id": 11,
+    "catName": "galaxy",
+    "breed": "Domestic Shorthair",
+    "age": 4,
+    "time": "4h ago",
+    "caption": "Galaxy drinking from the spa pool again!!",
+    "mood": "playful",
+    "image": "assets/images/galaxy.jpg"
+  },
+  {
+    "id": 12,
+    "catName": "Midnight",
+    "breed": "Domestic Shorthair",
+    "age": 4,
+    "time": "4h ago",
+    "caption": "Enjoying the outdoors!",
+    "mood": "sleepy",
+    "image": "assets/images/midnight.jpg"
+  },
+  {
+    "id": 13,
+    "catName": "Smudge",
+    "breed": "Domestic Shorthair",
+    "age": 4,
+    "time": "4h ago",
+    "caption": "Cute as always",
+    "mood": "royal",
+    "image": "assets/images/smudge.jpg"
+  },
+  {
+    "id": 14,
+    "catName": "Nebula",
+    "breed": "Domestic Shorthair",
+    "age": 4,
+    "time": "4h ago",
+    "caption": "Lovely Nebula enjoying the outdoors",
+    "mood": "royal",
+    "image": "assets/images/nebula.jpg"
   }
 ]

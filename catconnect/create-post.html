@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>CatConnect | Create Post</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- JavaScript -->
+    <script src="js/settings.js" defer></script>
+    <script src="js/create-post.js" defer></script>
+  </head>
+
+  <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+  <body>
+    <!-- ⁡⁣⁢⁡⁣⁢⁢--- M A I N   A P P   W R A P P E R ---⁡⁡⁡ -->
+    <div class="app-wrapper">
+      <!-- ⁡⁣⁣⁢-- Header --⁡ -->
+      <header class="details-header">
+        <a href="index.html" class="back-link" aria-label="Back to Home Feed">
+          <i class="bi bi-arrow-left"></i>
+        </a>
+
+        <h1>Create Post</h1>
+
+        <div aria-hidden="true"></div>
+      </header>
+
+      <!-- ⁡⁣⁣⁢-- Create Post Form --⁡ -->
+      <main>
+        <form id="createPostForm" class="create-post-form">
+          <!-- Upload photo -->
+          <section class="form-card">
+            <label for="catPhotoInput" class="form-section-title">Upload Cat Photo</label>
+
+            <div class="upload-box" id="uploadBox">
+              <input id="catPhotoInput" type="file" accept="image/*" class="visually-hidden" />
+
+              <label for="catPhotoInput" class="upload-label">
+                <i class="bi bi-image"></i>
+                <span>Tap to upload image</span>
+              </label>
+
+              <img id="imagePreview" class="image-preview" src="" alt="" hidden />
+            </div>
+          </section>
+
+          <!-- ⁡⁣⁣⁢-- Caption --⁡ -->
+          <section class="form-card">
+            <label for="captionInput" class="form-section-title">Add Caption</label>
+
+            <textarea id="captionInput" class="form-control caption-input" maxlength="200" placeholder="What's your cat up to today?" rows="4"></textarea>
+
+            <p id="captionCounter" class="caption-counter">0 / 200</p>
+          </section>
+
+          <!-- ⁡⁣⁣⁢-- Mood --⁡ -->
+          <section class="form-card">
+            <fieldset class="mood-fieldset">
+              <legend class="form-section-title">Select Cat Mood</legend>
+
+              <div class="mood-options">
+                <label class="mood-option">
+                  <input type="radio" name="mood" value="happy" />
+                  <img src="assets/moods/default/happy.svg" alt="" aria-hidden="true" />
+                  <span>Happy</span>
+                </label>
+
+                <label class="mood-option">
+                  <input type="radio" name="mood" value="sleepy" />
+                  <img src="assets/moods/default/sleepy.svg" alt="" aria-hidden="true" />
+                  <span>Sleepy</span>
+                </label>
+
+                <label class="mood-option">
+                  <input type="radio" name="mood" value="playful" />
+                  <img src="assets/moods/default/playful.svg" alt="" aria-hidden="true" />
+                  <span>Playful</span>
+                </label>
+
+                <label class="mood-option">
+                  <input type="radio" name="mood" value="royal" />
+                  <img src="assets/moods/default/royal.svg" alt="" aria-hidden="true" />
+                  <span>Royal</span>
+                </label>
+
+                <label class="mood-option">
+                  <input type="radio" name="mood" value="hungry" />
+                  <img src="assets/moods/default/hungry.svg" alt="" aria-hidden="true" />
+                  <span>Hungry</span>
+                </label>
+              </div>
+            </fieldset>
+          </section>
+
+          <!-- ⁡⁣⁣⁢-- Publish --⁡ -->
+          <button class="btn btn-brand publish-btn" type="submit">Publish Post</button>
+        </form>
+      </main>
+
+      <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+      <!-- ⁡⁢⁢⁢-- Success Modal --⁡ -->
+      <div class="modal fade" id="postSuccessModal" tabindex="-1" aria-labelledby="postSuccessModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content feedback-modal">
+            <div class="modal-body text-center">
+              <i class="bi bi-check-circle feedback-icon success-icon"></i>
+              <h2 id="postSuccessModalLabel">Post Published</h2>
+              <p>Your cat post has been added to the feed.</p>
+
+              <a href="index.html" class="btn btn-brand">Back To Feed</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ⁡⁢⁣⁢-- Error Modal --⁡ -->
+      <div class="modal fade" id="postErrorModal" tabindex="-1" aria-labelledby="postErrorModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content feedback-modal">
+            <div class="modal-body text-center">
+              <i class="bi bi-exclamation-triangle feedback-icon error-icon"></i>
+              <h2 id="postErrorModalLabel">Upload Failed</h2>
+              <p>Please add a photo, caption and mood before publishing.</p>
+
+              <button class="btn btn-brand" type="button" data-bs-dismiss="modal">Try Again</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ----------------------------------------------------------------------------------------------------------------------- -->
+
+      <!-- ⁡⁣⁣⁢-- Bottom Navigation --⁡ -->
+      <nav class="bottom-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-item">
+          <i class="bi bi-house"></i>
+          <span>Home</span>
+        </a>
+
+        <a href="discover.html" class="nav-item">
+          <i class="bi bi-search"></i>
+          <span>Discover</span>
+        </a>
+
+        <a href="create-post.html" class="nav-item active" aria-current="page">
+          <i class="bi bi-plus-circle-fill"></i>
+          <span>Create</span>
+        </a>
+
+        <a href="#" class="nav-item">
+          <i class="bi bi-bell"></i>
+          <span>Activity</span>
+        </a>
+
+        <a href="profile.html" class="nav-item">
+          <i class="bi bi-person"></i>
+          <span>Profile</span>
+        </a>
+      </nav>
+    </div>
+  </body>
+</html>
