@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #f7ecdf;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculate-container {
+  width: 90%;
+  max-width: 380px;
+
+  background-color: #91aaa2;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.calculate {
+  width: 100%;
+  padding-block: 10px;
+}
+
+label {
+  font-weight: 600;
+}
+
+hr {
+  margin-block: 10px;
+}
+
+.calculateBtn {
+  margin: 20px 0px 10px 0px;
+  padding: 16px 10px;
+  border-radius: 5px;
+  font-weight: 600;
+  width: 100%;
+
+  background-color: rgb(177, 228, 211);
+  border: none;
+  cursor: pointer;
+  box-shadow: 1px 3px 8px rgb(0, 0, 0, 0.18);
+  transition:
+    transform 0.15s ease,
+    background-color 0.15s ease;
+}
+
+button:hover {
+  transform: translate(1px, -2px);
+}
+
+input,
+select {
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+}
+
+#result {
+  height: 40px;
+}

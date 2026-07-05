@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator Frontend</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <section class="calculate-container">
+      <h1>Calculate</h1>
+      <div class="calculate">
+        <label for="num1">Number 1:</label>
+        <input type="number" id="num1" />
+      </div>
+
+      <div class="calculate">
+        <label for="num2">Number 2:</label>
+        <input type="number" id="num2" />
+      </div>
+
+      <div class="calculate">
+        <label for="operation">Operation:</label>
+        <select id="operation">
+          <option value="add">Add</option>
+          <option value="subtract">Subtract</option>
+          <option value="multiply">Multiply</option>
+          <option value="divide">Divide</option>
+        </select>
+      </div>
+
+      <hr />
+
+      <button type="submit" class="calculateBtn" id="calculateBtn">Calculate</button>
+
+      <div class="calculate">
+        <label for="result">Result:</label>
+        <input type="number" id="result" readonly />
+      </div>
+    </section>
+  </body>
+</html>
