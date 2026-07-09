@@ -1,0 +1,173 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "Module 5 Backend API",
+    "description": "Swagger documentation for the Module 5 backend exercises.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Local development server"
+    }
+  ],
+  "paths": {
+    "/calculator/add": {
+      "get": {
+        "tags": ["Calculator"],
+        "summary": "Add two numbers",
+        "parameters": [
+          {
+            "name": "num1",
+            "in": "query",
+            "required": true,
+            "description": "The first number",
+            "schema": { "type": "number" }
+          },
+          {
+            "name": "num2",
+            "in": "query",
+            "required": true,
+            "description": "The second number",
+            "schema": { "type": "number" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful addition",
+            "content": {
+              "application/json": {
+                "example": { "result": 9 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/calculator/subtract": {
+      "get": {
+        "tags": ["Calculator"],
+        "summary": "Subtract two numbers",
+        "parameters": [
+          {
+            "name": "num1",
+            "in": "query",
+            "required": true,
+            "description": "The first number",
+            "schema": { "type": "number" }
+          },
+          {
+            "name": "num2",
+            "in": "query",
+            "required": true,
+            "description": "The second number",
+            "schema": { "type": "number" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful subtraction",
+            "content": {
+              "application/json": {
+                "example": { "result": 6 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/calculator/multiply": {
+      "get": {
+        "tags": ["Calculator"],
+        "summary": "Multiply two numbers",
+        "parameters": [
+          {
+            "name": "num1",
+            "in": "query",
+            "required": true,
+            "description": "The first number",
+            "schema": { "type": "number" }
+          },
+          {
+            "name": "num2",
+            "in": "query",
+            "required": true,
+            "description": "The second number",
+            "schema": { "type": "number" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful multiplication",
+            "content": {
+              "application/json": {
+                "example": { "result": 20 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/calculator/divide": {
+      "get": {
+        "tags": ["Calculator"],
+        "summary": "Divide two numbers",
+        "parameters": [
+          {
+            "name": "num1",
+            "in": "query",
+            "required": true,
+            "description": "The first number",
+            "schema": { "type": "number" }
+          },
+          {
+            "name": "num2",
+            "in": "query",
+            "required": true,
+            "description": "The second number",
+            "schema": { "type": "number" }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful division",
+            "content": {
+              "application/json": {
+                "example": { "result": 5 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/products": {
+      "get": {
+        "tags": ["Products"],
+        "summary": "Get all products",
+        "description": "Returns all products from the Fake Store API through the Express backend.",
+        "responses": {
+          "200": {
+            "description": "Successful response containing an array of products",
+            "content": {
+              "application/json": {
+                "example": [
+                  {
+                    "id": 1,
+                    "title": "Example product",
+                    "price": 109.95,
+                    "description": "Example product description",
+                    "category": "electronics",
+                    "image": "https://example.com/product.jpg"
+                  }
+                ]
+              }
+            }
+          },
+          "500": {
+            "description": "Failed to fetch products"
+          }
+        }
+      }
+    }
+  }
+}
