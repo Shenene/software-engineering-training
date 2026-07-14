@@ -1,0 +1,28 @@
+.emoji {
+  width: min(500px, calc(100% - 2rem));
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid #dd9208;
+  border-radius: 12px;
+}
+
+.emoji-symbol {
+  font-size: 4rem;
+  margin-block: 2.5rem;
+}
+
+.emoji button {
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+
+  background: radial-gradient(#e4dfc7, #ebd038);
+  transition: transform 0.2s ease;
+}
+
+.emoji button:hover {
+  transform: translate(2px, -2px);
+}
