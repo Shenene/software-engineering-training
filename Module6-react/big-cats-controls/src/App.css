@@ -1,0 +1,26 @@
+.cat-card {
+  padding: 1rem;
+  border: 1px solid #857e7e;
+  border-radius: 12px;
+  margin-block: 2rem;
+}
+
+.cat-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ------------------------- */
+
+@media (min-width: 390px) {
+  .cat-card {
+    width: 350px;
+  }
+
+  .big-cats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
