@@ -11,11 +11,16 @@
   object-fit: cover;
 }
 
+.big-cats-controls button {
+  margin: 20px 12px;
+  padding: 0.75rem 0.6rem;
+}
+
 /* ------------------------- */
 
 @media (min-width: 390px) {
   .cat-card {
-    width: 350px;
+    width: 500px;
   }
 
   .big-cats {
