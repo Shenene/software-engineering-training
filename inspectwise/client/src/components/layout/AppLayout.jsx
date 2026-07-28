@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "./Sidebar.jsx";
+import "./AppLayout.css";
 
 function AppLayout() {
   return (
