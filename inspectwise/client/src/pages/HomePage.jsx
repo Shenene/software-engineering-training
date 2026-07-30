@@ -1,9 +1,19 @@
+import HomeHeader from "../components/common/HomeHeader";
+
+// ---------------------------------- //
+
 function HomePage() {
   return (
     <section>
-      <h1>Home</h1>
+      <HomeHeader />
+
+      <div>
+        <p>Home page content will go here.</p>
+      </div>
     </section>
   );
 }
+
+// ---------------------------------- //
 
 export default HomePage;
