@@ -14,11 +14,17 @@ function App() {
       <Route element={<AppLayout />}>
         <Route path="/" element={<HomePage />} />
 
-        <Route path="/explorer" index element={<BuildingExplorerPage />} />
+        {/* ------------------------------ */}
 
-        <Route path=":componentId" element={<ComponentDetailsPage />} />
+        <Route path="/explorer">
+          <Route index element={<BuildingExplorerPage />} />
 
-        <Route path=":componentId/checklist" element={<InspectionChecklistPage />} />
+          <Route path=":componentId" element={<ComponentDetailsPage />} />
+
+          <Route path=":componentId/checklist" element={<InspectionChecklistPage />} />
+        </Route>
+
+        {/* ------------------------------ */}
 
         <Route path="/ai-assistant" element={<AiAssistantPage />} />
 

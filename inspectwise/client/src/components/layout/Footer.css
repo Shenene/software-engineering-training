@@ -1,0 +1,37 @@
+.site-footer {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer ul {
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.site-footer a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+.site-footer a:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+  border-radius: var(--border-radius-small);
+}

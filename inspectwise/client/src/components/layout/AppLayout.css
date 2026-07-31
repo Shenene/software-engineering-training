@@ -4,8 +4,15 @@
   background-color: var(--color-page-background);
 }
 
+.app-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  padding: 2rem;
+}
+
 .main-content {
   flex: 1;
   min-width: 0;
-  padding: 2rem;
 }
