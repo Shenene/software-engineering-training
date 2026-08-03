@@ -1,0 +1,47 @@
+.site-conditions-card__content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.site-conditions-card__content h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.site-conditions-card__content p {
+  margin: 0 0 0.75rem;
+}
+
+/* ---------------------------------------- */
+
+/* ⁡⁣⁢⁢Caution status⁡ */
+.status-caution {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--color-caution);
+  border-radius: var(--border-radius-small);
+  background-color: rgba(245, 158, 11, 0.2);
+  color: var(--color-caution);
+}
+
+.status-caution i,
+.status-caution span {
+  color: var(--color-caution);
+}
+
+/* ---------------------------------------------- */
+
+/* ⁡⁣⁢⁡⁢⁢⁣Media Queries⁡⁡ */
+
+@media (max-width: 800px) {
+  .site-conditions-card__content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

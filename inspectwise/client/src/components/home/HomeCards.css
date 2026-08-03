@@ -1,0 +1,23 @@
+.dashboard-card {
+  padding: 1.5rem;
+  margin: 1.5rem;
+  border-radius: var(--border-radius-large);
+  background-color: var(--color-card-background);
+  box-shadow: var(--shadow-card);
+}
+
+.dashboard-card__heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.dashboard-card__heading i {
+  flex-shrink: 0;
+  color: var(--color-icon);
+  font-size: 1.5rem;
+}

@@ -1,0 +1,13 @@
+.featured-components-card__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.featured-components-card__list li {
+  margin-bottom: 0.75rem;
+}
+
+.featured-components-card__list li:last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,28 @@
+.continue-learning-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.continue-learning-card p {
+  font-weight: var(--font-weight-medium);
+  margin-bottom: 0.5rem;
+}
+
+.learning-progress {
+  width: 200px;
+  height: 15px;
+  background-color: var(--color-primary);
+  margin: 0 0 2rem;
+  position: relative;
+  border-radius: var(--border-radius-small);
+}
+
+.learning-progress-value {
+  width: 125px;
+  height: 15px;
+  background-color: var(--color-focus);
+  position: absolute;
+  z-index: 1;
+  border-radius: var(--border-radius-small);
+}
