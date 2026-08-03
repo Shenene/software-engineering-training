@@ -1,3 +1,4 @@
+import { inspectionStages } from "../../data/inspectionData";
 import "./InspectionStagesCard.css";
 
 // ---------------------------------- //
@@ -11,18 +12,9 @@ function InspectionStagesCard() {
       </h2>
 
       <ul className="inspection-stages-card__list">
-        <li>Underslab Plumbing</li>
-        <li>Foundation / Block</li>
-        <li>Slab</li>
-        <li>Sub-floor</li>
-        <li>Framing</li>
-        <li>Pre-Cladding / Wrap</li>
-        <li>Cladding</li>
-        <li>Pre-line Plumbing</li>
-        <li>Postline</li>
-        <li>Waterproofing</li>
-        <li>Drainage</li>
-        <li>Final</li>
+        {inspectionStages.map((stage) => (
+          <li key={stage}>{stage}</li>
+        ))}
       </ul>
     </article>
   );

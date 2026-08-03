@@ -1,6 +1,11 @@
+import { buildingComponents } from "../../data/inspectionData";
 import "./FeaturedComponentsCard.css";
 
+// ---------------------------------- //
+
 function FeaturedComponentsCard() {
+  const featuredComponents = buildingComponents.filter((component) => component.featured);
+
   return (
     <article className="dashboard-card featured-components-card">
       <h2 className="dashboard-card__heading">
@@ -9,10 +14,9 @@ function FeaturedComponentsCard() {
       </h2>
 
       <ul className="featured-components-card__list">
-        <li>Bottom Plate</li>
-        <li>Wall Bracing</li>
-        <li>Window Flashing</li>
-        <li>Roof Cladding</li>
+        {featuredComponents.map((component) => (
+          <li key={component.id}>{component.name}</li>
+        ))}
       </ul>
     </article>
   );

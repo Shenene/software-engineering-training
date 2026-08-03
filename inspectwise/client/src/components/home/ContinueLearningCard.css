@@ -5,24 +5,42 @@
 }
 
 .continue-learning-card p {
-  font-weight: var(--font-weight-medium);
   margin-bottom: 0.5rem;
+  font-weight: var(--font-weight-medium);
 }
+
+/* ---------------------------------------------- */
+
+/* ⁡⁣⁢⁢Progress bar⁡ */
 
 .learning-progress {
-  width: 200px;
-  height: 15px;
-  background-color: var(--color-primary);
-  margin: 0 0 2rem;
-  position: relative;
-  border-radius: var(--border-radius-small);
+  width: 70%;
+  height: 0.75rem;
+  margin-bottom: 2.25rem;
+  overflow: hidden;
+  /* position: relative; */
+  border-radius: 999px;
+  background-color: var(--color-border);
 }
 
-.learning-progress-value {
-  width: 125px;
+.learning-progress__value {
+  /* width: 125px;
   height: 15px;
   background-color: var(--color-focus);
   position: absolute;
   z-index: 1;
-  border-radius: var(--border-radius-small);
+  border-radius: var(--border-radius-small); */
+  height: 100%;
+  border-radius: inherit;
+  background-color: var(--color-primary);
+}
+
+/* ---------------------------------------------- */
+
+/* ⁡⁣⁢⁡⁢⁢⁣Media queries⁡⁡ */
+
+@media (max-width: 600px) {
+  .learning-progress {
+    width: 100%;
+  }
 }
