@@ -4,7 +4,7 @@ export const buildingComponents = [
   {
     id: "bottom-plate",
     name: "Bottom Plate",
-    stage: "Framing",
+    stages: ["Framing"],
     summary: "Supports wall framing and transfers structural loads to the concrete foundation.",
     featured: true,
     completed: false,
@@ -12,7 +12,7 @@ export const buildingComponents = [
   {
     id: "wall-bracing",
     name: "Wall Bracing",
-    stage: "Framing",
+    stages: ["Framing", "Postline"],
     summary: "Provides resistance against horizontal wind and earthquake loads.",
     featured: true,
     completed: true,
@@ -20,7 +20,7 @@ export const buildingComponents = [
   {
     id: "window-flashing",
     name: "Window Flashing",
-    stage: "Pre-Cladding / Wrap",
+    stages: ["Pre-Cladding / Wrap", "Cladding"],
     summary: "Helps direct water away from window openings and prevent moisture entry.",
     featured: true,
     completed: false,
@@ -28,7 +28,7 @@ export const buildingComponents = [
   {
     id: "roof-cladding",
     name: "Roof Cladding",
-    stage: "Cladding",
+    stages: ["Cladding"],
     summary: "Forms the external weatherproof covering of the roof.",
     featured: true,
     completed: false,

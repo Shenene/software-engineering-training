@@ -11,6 +11,27 @@
   list-style: none;
 }
 
+.inspection-stages-card__link {
+  display: inline-block;
+  color: var(--color-text-primary);
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.inspection-stages-card__link:hover {
+  color: var(--color-primary-hover);
+  transform: translateX(3px);
+}
+
+.inspection-stages-card__link:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+  border-radius: var(--border-radius-small);
+}
+
 /* ---------------------------------------------- */
 
 /* ⁡⁢⁢⁣Media Queries⁡ */

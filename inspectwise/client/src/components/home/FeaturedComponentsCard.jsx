@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { buildingComponents } from "../../data/inspectionData";
 import "./FeaturedComponentsCard.css";
 
@@ -5,6 +6,8 @@ import "./FeaturedComponentsCard.css";
 
 function FeaturedComponentsCard() {
   const featuredComponents = buildingComponents.filter((component) => component.featured);
+
+  // ------------------------------
 
   return (
     <article className="dashboard-card featured-components-card">
@@ -15,7 +18,11 @@ function FeaturedComponentsCard() {
 
       <ul className="featured-components-card__list">
         {featuredComponents.map((component) => (
-          <li key={component.id}>{component.name}</li>
+          <li key={component.id}>
+            <Link className="featured-components-card__link" to={`/explorer/${component.id}`}>
+              {component.name}
+            </Link>
+          </li>
         ))}
       </ul>
     </article>

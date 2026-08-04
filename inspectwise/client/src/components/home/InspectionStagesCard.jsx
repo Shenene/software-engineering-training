@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { inspectionStages } from "../../data/inspectionData";
 import "./InspectionStagesCard.css";
 
@@ -13,7 +14,11 @@ function InspectionStagesCard() {
 
       <ul className="inspection-stages-card__list">
         {inspectionStages.map((stage) => (
-          <li key={stage}>{stage}</li>
+          <li key={stage}>
+            <Link className="inspection-stages-card__link" to={`/explorer?stage=${encodeURIComponent(stage)}`}>
+              {stage}
+            </Link>
+          </li>
         ))}
       </ul>
     </article>
