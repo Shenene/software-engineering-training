@@ -4,6 +4,10 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import PageHeader from "../components/common/PageHeader";
 import { buildingComponents, inspectionStages } from "../data/inspectionData";
 
+import buildingCutaway from "../images/building-cutaway.svg";
+
+import "./BuildingExplorerPage.css";
+
 // -------------------------------------------------------------------------- //
 
 function BuildingExplorerPage() {
@@ -89,71 +93,112 @@ function BuildingExplorerPage() {
       />
 
       <div className="building-explorer-content">
-        <div className="component-search-field">
-          <label htmlFor="componentSearch">Search building components</label>
+        <div className="building-explorer-toolbar">
+          <div className="component-search-field">
+            <label htmlFor="componentSearch">Search building components</label>
 
-          <div className="component-search-field__input-wrapper">
-            <i className="bi bi-search" aria-hidden="true"></i>
+            <div className="component-search-field__input-wrapper">
+              <i className="bi bi-search" aria-hidden="true"></i>
 
-            <input id="componentSearch" name="componentSearch" type="search" placeholder="Search by component name" value={searchTerm} onChange={handleSearchChange} />
+              <input id="componentSearch" name="componentSearch" type="search" placeholder="Search by component name" value={searchTerm} onChange={handleSearchChange} />
+            </div>
+          </div>
+
+          <div className="inspection-stage-field">
+            <label htmlFor="inspectionStage">Inspection Stage</label>
+
+            <div className="inspection-stage-field__select-wrapper">
+              <select id="inspectionStage" name="inspectionStage" value={selectedStage} onChange={handleStageChange}>
+                <option value="">All inspection stages</option>
+
+                {inspectionStages.map((stage) => (
+                  <option key={stage} value={stage}>
+                    {stage}
+                  </option>
+                ))}
+              </select>
+
+              <i className="inspection-stage-field__chevron bi bi-chevron-down" aria-hidden="true"></i>
+            </div>
           </div>
         </div>
 
-        <div className="inspection-stage-field">
-          <label htmlFor="inspectionStage">Inspection Stage</label>
+        <div className="building-explorer-main-grid">
+          <section className="building-illustration-card" aria-label="Interactive building illustration">
+            <div className="building-illustration-card__image-wrapper">
+              <img className="building-illustration-card__image" src={buildingCutaway} alt="Cutaway illustration of a residential building" />
 
-          <select id="inspectionStage" name="inspectionStage" value={selectedStage} onChange={handleStageChange}>
-            <option value="">All inspection stages</option>
+              {buildingComponents
+                .filter((component) => component.hotspot)
+                .map((component) => {
+                  const isSelected = component.id === selectedComponentId;
 
-            {inspectionStages.map((stage) => (
-              <option key={stage} value={stage}>
-                {stage}
-              </option>
-            ))}
-          </select>
-        </div>
-
-        <section className="explorer-component-list">
-          <h2>Component List</h2>
-
-          {filteredComponents.length > 0 ? (
-            <ul className="explorer-component-list__items">
-              {filteredComponents.map((component) => {
-                const isSelected = component.id === selectedComponentId;
-
-                return (
-                  <li key={component.id}>
-                    <button className={`explorer-component-list__button ${isSelected ? "selected" : ""}`} type="button" onClick={() => handleComponentSelect(component.id)} aria-pressed={isSelected}>
-                      <span>{component.name}</span>
-
-                      {component.completed && <i className="bi bi-check" aria-label="Completed"></i>}
+                  return (
+                    <button
+                      key={component.id}
+                      className={`building-hotspot ${isSelected ? "building-hotspot--selected" : ""}`}
+                      type="button"
+                      style={{
+                        top: component.hotspot.top,
+                        left: component.hotspot.left,
+                      }}
+                      onClick={() => handleComponentSelect(component.id)}
+                      aria-label={`Select ${component.name}`}
+                      aria-pressed={isSelected}
+                    >
+                      <span className="building-hotspot__label">{component.name}</span>
                     </button>
-                  </li>
-                );
-              })}
-            </ul>
-          ) : (
-            <p>No components match the selected stage and search.</p>
-          )}
-        </section>
+                  );
+                })}
+            </div>
+          </section>
+
+          <section className="explorer-component-list">
+            <h2>Component List</h2>
+
+            {filteredComponents.length > 0 ? (
+              <ul className="explorer-component-list__items">
+                {filteredComponents.map((component) => {
+                  const isSelected = component.id === selectedComponentId;
+
+                  return (
+                    <li key={component.id}>
+                      <button className={`explorer-component-list__button ${isSelected ? "selected" : ""}`} type="button" onClick={() => handleComponentSelect(component.id)} aria-pressed={isSelected}>
+                        <span>{component.name}</span>
+
+                        {component.completed && <i className="bi bi-check" aria-label="Completed"></i>}
+                      </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            ) : (
+              <p>No components match the selected stage and search.</p>
+            )}
+          </section>
+        </div>
 
         <section className="selected-component">
           <h2>Selected Component</h2>
 
           {selectedComponent ? (
-            <>
-              <h3>{selectedComponent.name}</h3>
+            <div className="selected-component__content">
+              <div className="selected-component__details">
+                <h3>{selectedComponent.name}</h3>
 
-              <p>{selectedComponent.summary}</p>
+                <p>{selectedComponent.summary}</p>
 
-              <p>
-                <strong>Inspection stages:</strong> {selectedComponent.stages.join(", ")}
-              </p>
+                <button className="button button--primary button--medium" type="button" onClick={handleViewComponentDetails}>
+                  View Component Details
+                </button>
+              </div>
 
-              <button className="button button--primary button--medium" type="button" onClick={handleViewComponentDetails}>
-                View Component Details
-              </button>
-            </>
+              <div className="selected-component__stage">
+                <h3>Inspection Stages</h3>
+
+                <p>{selectedComponent.stages.join(", ")}</p>
+              </div>
+            </div>
           ) : (
             <p>Select a component to view its information.</p>
           )}
