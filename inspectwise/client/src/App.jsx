@@ -8,6 +8,8 @@ import ComponentDetailsPage from "./pages/ComponentDetailsPage";
 import HomePage from "./pages/HomePage";
 import InspectionChecklistPage from "./pages/InspectionChecklistPage";
 
+// ---------------------------------- //
+
 function App() {
   return (
     <Routes>
@@ -33,5 +35,7 @@ function App() {
     </Routes>
   );
 }
+
+// ---------------------------------- //
 
 export default App;

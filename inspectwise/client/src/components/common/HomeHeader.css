@@ -16,3 +16,38 @@
   font-size: 1.75rem;
   font-weight: var(--font-weight-semibold);
 }
+
+/* -------------------------------- */
+
+/* ⁡⁢⁢⁣Media queries⁡ */
+/* 600px max-width */
+@media (max-width: 600px) {
+  .home-header {
+    padding-inline: 1rem;
+    text-align: center;
+  }
+
+  .home-header h1 {
+    font-size: 2rem;
+  }
+
+  .home-header p {
+    max-width: 320px;
+    margin-inline: auto;
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+}
+
+/* 375px max-width */
+@media (max-width: 375px) {
+  .home-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .home-header p {
+    max-width: 240px;
+    font-size: 1.5rem;
+    line-height: 1.2;
+  }
+}

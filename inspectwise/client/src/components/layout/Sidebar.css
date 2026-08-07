@@ -9,9 +9,13 @@
   margin-bottom: 3rem;
 }
 
+.sidebar-close-button {
+  display: none;
+}
+
 /* -------------------------------------- */
 
-/* Logo */
+/* ⁡⁣⁢⁢Logo⁡ */
 .sidebar-logo {
   display: block;
   width: 80px;
@@ -29,7 +33,7 @@
 }
 
 .sidebar-actions {
-  margin-bottom: 3rem;
+  margin-bottom: 0;
 }
 
 .sidebar-actions li,
@@ -66,7 +70,52 @@
   outline-offset: 3px;
 }
 
-/* Main Menu */
+/* -------------------------------------- */
+
+/* ⁡⁣⁢⁢Page-specific sidebar content⁡ */
+.sidebar-top-content {
+  min-height: 112px;
+  margin-bottom: 3rem;
+}
+
+.sidebar-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  color: var(--color-text-primary);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sidebar-back-link i {
+  flex-shrink: 0;
+  color: var(--color-icon);
+  font-size: 1.1rem;
+}
+
+.sidebar-back-link:hover {
+  color: var(--color-primary-hover);
+  transform: translateX(-3px);
+}
+
+.sidebar-back-link:hover i {
+  color: var(--color-primary-hover);
+}
+
+.sidebar-back-link:focus-visible {
+  border-radius: var(--border-radius-small);
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+/* -------------------------------------- */
+
+/* ⁡⁣⁢⁢Main Menu⁡ */
 .sidebar-heading {
   margin-bottom: 1.25rem;
   padding-bottom: 0.75rem;
@@ -114,4 +163,65 @@
   outline: 3px solid var(--color-focus);
   outline-offset: 3px;
   border-radius: var(--border-radius-small);
+}
+
+/* -------------------------------------- */
+
+/* ⁡⁢⁢⁣Media queries⁡ */
+/* 700px max-width */
+@media (max-width: 700px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    width: min(250px, 78vw);
+    height: 100vh;
+    min-height: 100vh;
+
+    overflow-y: auto;
+
+    transform: translateX(-100%);
+
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.sidebar--open {
+    transform: translateX(0);
+  }
+
+  .sidebar-close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    border: 0;
+    background-color: transparent;
+    color: var(--color-text-primary);
+
+    cursor: pointer;
+  }
+
+  .sidebar-close-button i {
+    font-size: 1.25rem;
+  }
+
+  .sidebar-close-button:focus-visible {
+    border-radius: var(--border-radius-small);
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
+  }
+
+  .sidebar-brand {
+    margin-top: 2rem;
+  }
 }

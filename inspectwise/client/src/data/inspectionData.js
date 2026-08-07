@@ -5,6 +5,17 @@ export const buildingComponents = [
     name: "Bottom Plate",
     stages: ["Framing"],
     summary: "Supports wall framing and transfers structural loads to the concrete foundation.",
+
+    overview: "Bottom plate proprietary post-fixed anchors to be installed within 150mm of each end of the bottom plate and to be spaced at a maximum of 900mm centres, or 600mm centres when external walls are on concrete slab edges formed with masonry header blocks.",
+
+    treatment: "SG8 and H1.2 treated timber",
+
+    commonIssues: ["Inadequate moisture barriers and protection", "Incorrect structural fixings or anchors", "End-of-plate fixings positioned too far away", "Unsupported slab overhangs"],
+
+    references: {
+      standard: "NZS 3604:2011 Timber-framed buildings",
+      clauses: ["B1 Structure", "B2 Durability", "E2 External Moisture", "E3 Internal Moisture", "F2 Hazardous Building Materials"],
+    },
     featured: true,
     completed: false,
     hotspot: { top: "84%", left: "51%" },

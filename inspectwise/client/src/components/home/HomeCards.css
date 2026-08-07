@@ -1,6 +1,7 @@
 .dashboard-card {
+  width: 100%;
   padding: 1.5rem;
-  margin: 1.5rem;
+  /* margin: 1.5rem; */
   border-radius: var(--border-radius-large);
   background-color: var(--color-card-background);
   box-shadow: var(--shadow-card);

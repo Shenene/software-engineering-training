@@ -22,7 +22,11 @@
 
 @media (max-width: 600px) {
   .home-dashboard {
-    gap: 1rem;
+    gap: 1.5rem;
     padding: 1rem;
+  }
+
+  .dashboard-card {
+    padding: 1.5rem;
   }
 }

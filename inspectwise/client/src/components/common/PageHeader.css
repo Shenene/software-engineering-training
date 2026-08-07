@@ -68,3 +68,41 @@
   color: var(--color-icon);
   font-size: 0.75rem;
 }
+
+/* -------------------------------------- */
+
+/* ⁡⁢⁢⁣⁡⁢⁢⁣Media queries⁡⁡ */
+/* 600px max-width */
+@media (max-width: 600px) {
+  .page-header {
+    padding-inline: 1rem;
+    text-align: center;
+  }
+
+  .page-header-brand {
+    font-size: 2rem;
+  }
+
+  .breadcrumbs {
+    font-size: 0.85rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.75rem;
+  }
+}
+
+/* 375px max-width */
+@media (max-width: 375px) {
+  .page-header-brand {
+    font-size: 1.8rem;
+  }
+
+  .breadcrumbs {
+    font-size: 0.8rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
+}

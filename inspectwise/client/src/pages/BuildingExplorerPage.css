@@ -130,17 +130,19 @@
 
 .building-illustration-card__image-wrapper {
   position: relative;
-  display: flex;
+  width: min(100%, 430px);
+  margin-inline: auto;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-width: 0;
+  min-width: 0; */
 }
 
 .building-illustration-card__image {
   display: block;
   width: 100%;
-  max-width: 430px;
+  /* max-width: 430px; */
   height: auto;
   object-fit: contain;
 
@@ -366,7 +368,8 @@
   }
 
   .building-illustration-card__image {
-    max-width: 460px;
+    width: min(100%, 460px);
+    /* max-width: 460px; */
   }
 }
 
@@ -399,8 +402,12 @@
     padding: 0.75rem;
   }
 
-  .building-illustration-card__image {
+  /* .building-illustration-card__image {
     max-width: 100%;
+  } */
+
+  .building-illustration-card__image-wrapper {
+    width: 100%;
   }
 
   .building-hotspot {
