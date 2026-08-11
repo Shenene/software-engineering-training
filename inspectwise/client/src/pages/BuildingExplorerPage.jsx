@@ -15,9 +15,16 @@ function BuildingExplorerPage() {
 
   const [searchTerm, setSearchTerm] = useState("");
 
-  const [selectedComponentId, setSelectedComponentId] = useState("bottom-plate");
-
   const navigate = useNavigate();
+
+  const [selectedComponentId, setSelectedComponentId] = useState(() => {
+    const componentFromUrl = searchParams.get("component");
+
+    const componentExists = buildingComponents.some((component) => component.id === componentFromUrl);
+    return componentExists ? componentFromUrl : "bottom-plate";
+  });
+
+  const [completedComponentIds, setCompletedComponentIds] = useState([]);
 
   const stageFromUrl = searchParams.get("stage");
 
@@ -40,6 +47,24 @@ function BuildingExplorerPage() {
       setSelectedComponentId(filteredComponents[0]?.id ?? "");
     }
   }, [filteredComponents, selectedComponentId]);
+
+  useEffect(() => {
+    const completedIds = buildingComponents
+      .filter((component) => {
+        const savedInspection = localStorage.getItem(`inspection-${component.id}`);
+
+        if (!savedInspection) {
+          return false;
+        }
+
+        const inspectionData = JSON.parse(savedInspection);
+
+        return inspectionData.status === "Completed";
+      })
+      .map((component) => component.id);
+
+    setCompletedComponentIds(completedIds);
+  }, []);
 
   // -------------------------------------------
 
@@ -133,10 +158,14 @@ function BuildingExplorerPage() {
                 .map((component) => {
                   const isSelected = component.id === selectedComponentId;
 
+                  const isAvailable = filteredComponents.some((filteredComponent) => filteredComponent.id === component.id);
+
                   return (
                     <button
                       key={component.id}
-                      className={`building-hotspot ${isSelected ? "building-hotspot--selected" : ""}`}
+                      className={`building-hotspot ${isSelected ? "building-hotspot--selected" : ""}
+                        ${!isAvailable ? "building-hotspot--disabled" : ""}
+                      `}
                       type="button"
                       style={{
                         top: component.hotspot.top,
@@ -145,6 +174,7 @@ function BuildingExplorerPage() {
                       onClick={() => handleComponentSelect(component.id)}
                       aria-label={`Select ${component.name}`}
                       aria-pressed={isSelected}
+                      disabled={!isAvailable}
                     >
                       <span className="building-hotspot__label">{component.name}</span>
                     </button>
@@ -166,7 +196,7 @@ function BuildingExplorerPage() {
                       <button className={`explorer-component-list__button ${isSelected ? "selected" : ""}`} type="button" onClick={() => handleComponentSelect(component.id)} aria-pressed={isSelected}>
                         <span>{component.name}</span>
 
-                        {component.completed && <i className="bi bi-check" aria-label="Completed"></i>}
+                        {completedComponentIds.includes(component.id) && <i className="bi bi-check-circle-fill" aria-label="Completed"></i>}
                       </button>
                     </li>
                   );

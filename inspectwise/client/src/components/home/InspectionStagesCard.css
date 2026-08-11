@@ -35,7 +35,7 @@
 /* ---------------------------------------------- */
 
 /* ⁡⁢⁢⁣Media Queries⁡ */
-
+/* 600px max-width */
 @media (max-width: 600px) {
   .inspection-stages-card__list {
     grid-template-rows: none;

@@ -16,6 +16,35 @@ export const buildingComponents = [
       standard: "NZS 3604:2011 Timber-framed buildings",
       clauses: ["B1 Structure", "B2 Durability", "E2 External Moisture", "E3 Internal Moisture", "F2 Hazardous Building Materials"],
     },
+
+    checklistItems: [
+      {
+        id: "dpc-installed",
+        title: "DPC Installed",
+        description: "Check that an appropriate damp-proof course or approved bottom plate protection system is installed. Synthetic Plastic DPC (Damp proof Course) OR Bitumen DPC OR a Hiandri Bottom Plate Packer System.",
+      },
+      {
+        id: "timber-treatment",
+        title: "Timber Treatment",
+        description: "Confirm the bottom plate has the correct timber treatment for its location and exposure conditions.",
+      },
+      {
+        id: "anchor-bolts",
+        title: "M12 Anchor Bolts",
+        description: "Check that the required anchor bolts or approved proprietary fixings are installed correctly.",
+      },
+      {
+        id: "bolt-spacing",
+        title: "Bolt Spacing",
+        description: "Confirm anchor bolts or proprietary fixings are positioned and spaced in accordance with the requirements.",
+      },
+      {
+        id: "washer-fitted",
+        title: "Washer Fitted",
+        description: "Check that suitable washers are fitted where required and that fixings are properly secured.",
+      },
+    ],
+
     featured: true,
     completed: false,
     hotspot: { top: "84%", left: "51%" },

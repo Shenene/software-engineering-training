@@ -245,6 +245,20 @@
   transform: translateX(-50%) translateY(0);
 }
 
+.building-hotspot--disabled {
+  border-color: var(--color-border);
+  background-color: var(--color-card-background);
+  opacity: 0.35;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.building-hotspot--disabled:hover {
+  background-color: var(--color-card-background);
+  box-shadow: none;
+  transform: translate(-50%, -50%);
+}
+
 /* ---------------------------------------------- */
 
 /* ⁡⁣⁢⁢Component list⁡ */
