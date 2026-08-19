@@ -1,111 +1,99 @@
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --code-bg: #f4f3ec;
-  --accent: #aa3bff;
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --accent-border: rgba(170, 59, 255, 0.5);
-  --social-bg: rgba(244, 243, 236, 0.5);
-  --shadow:
-    rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  /* Brand colours */
+  --color-primary: #1e3a5f;
+  --color-primary-hover: #15314f;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  /* Background colours */
+  --color-page-background: #f8fafc;
+  --color-sidebar-background: #f0f1fd;
+  --color-card-background: #ffffff;
 
-  font: 18px/145% var(--sans);
-  letter-spacing: 0.18px;
-  color-scheme: light dark;
-  color: var(--text);
-  background: var(--bg);
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Text colours */
+  --color-text-primary: #333333;
+  --color-text-secondary: #666666;
+  --color-text-light: #ffffff;
 
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
+  /* Border colours */
+  --color-border: #c8c8d8;
+
+  /* Icon colours */
+  --color-icon: #808080;
+
+  /* Focus colour */
+  --color-focus: #8198b5;
+
+  /* Status colours */
+  --color-high-risk: #b42318;
+  --color-caution: #c74c00;
+  --color-success: #267a3e;
+
+  /* Shared design values */
+  --border-radius-small: 8px;
+  --border-radius-medium: 10px;
+  --border-radius-large: 14px;
+
+  /* Shadows */
+  --shadow-button: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-button-hover: 0 2px 6px rgba(0, 0, 0, 0.18);
+  --shadow-card: 0 3px 8px rgba(0, 0, 0, 0.15);
+  --shadow-modal: 0 12px 30px rgba(0, 0, 0, 0.25);
+
+  /* Shared heading sizes */
+  --font-size-brand: 2.5rem;
+  --font-size-page-heading: 1.75rem;
+  --font-size-section-heading: 1.25rem;
+
+  --font-size-brand-mobile: 1.8rem;
+  --font-size-page-heading-mobile: 1.6rem;
+
+  /* Font weight */
+  --font-weight-regular: 400; /* Normal body text */
+  --font-weight-medium: 500; /* Buttons & labels */
+  --font-weight-semibold: 600; /* Section headings */
+  --font-weight-bold: 700; /* Main headings */
+
+  /* Button sizes */
+  --button-padding-small: 0.45rem 0.85rem;
+  --button-padding-medium: 0.6rem 1rem;
+  --button-padding-large: 0.75rem 1.35rem;
+
+  --button-font-size-small: 0.875rem;
+  --button-font-size-medium: 0.95rem;
+  --button-font-size-large: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --code-bg: #1f2028;
-    --accent: #c084fc;
-    --accent-bg: rgba(192, 132, 252, 0.15);
-    --accent-border: rgba(192, 132, 252, 0.5);
-    --social-bg: rgba(47, 48, 58, 0.5);
-    --shadow:
-      rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
-  }
+/* ------------------------------------------------ */
 
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--color-page-background);
+  color: var(--color-text-primary);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: var(--font-weight-regular);
 }
 
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
-}
-
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
-}
-
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

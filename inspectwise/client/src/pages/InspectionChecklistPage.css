@@ -1,0 +1,297 @@
+/* ⁡⁣⁢⁢Inspection Checklist Page⁡ */
+.inspection-checklist-page {
+  width: 100%;
+}
+
+.inspection-checklist-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  padding: 2rem;
+
+  background-color: var(--color-sidebar-background);
+}
+
+/* -------------------------------- */
+
+/* ⁡⁣⁢⁢Shared Cards⁡ */
+.inspection-information-card,
+.inspection-checklist-card,
+.inspection-notes-card,
+.inspection-summary-card {
+  padding: 1.5rem;
+
+  border-radius: var(--border-radius-large);
+  background-color: var(--color-card-background);
+  box-shadow: var(--shadow-card);
+}
+
+.inspection-information-card h2,
+.inspection-notes-card h2,
+.inspection-summary-card h2 {
+  margin: 0 0 1rem;
+  padding-bottom: 0.75rem;
+
+  border-bottom: 1px solid var(--color-border);
+
+  font-size: 1.25rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+/* -------------------------------- */
+
+/* ⁡⁣⁢⁢Inspection Information⁡ */
+.inspection-information-list {
+  margin: 0;
+}
+
+.inspection-information-list div {
+  margin-bottom: 1rem;
+}
+
+.inspection-information-list div:last-child {
+  margin-bottom: 0;
+}
+
+.inspection-information-list dt {
+  margin-bottom: 0.25rem;
+  font-weight: var(--font-weight-semibold);
+}
+
+.inspection-information-list dd {
+  margin: 0;
+}
+
+/* -------------------------------- */
+
+/* ⁡⁣⁢⁢Checklist⁡ */
+.inspection-checklist-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.inspection-checklist-item {
+  overflow: hidden;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-small);
+
+  background-color: #f5f5f5;
+}
+
+.inspection-checklist-item--open {
+  background-color: var(--color-card-background);
+}
+
+/* -------------------------------- */
+
+/* ⁡⁣⁢⁢Accordion Button⁡ */
+.inspection-checklist-item__toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  width: 100%;
+  padding: 0.9rem 1rem;
+
+  border: 0;
+
+  background-color: transparent;
+  color: var(--color-text-primary);
+
+  font: inherit;
+  font-weight: var(--font-weight-semibold);
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.inspection-checklist-item__toggle i {
+  flex-shrink: 0;
+}
+
+.inspection-checklist-item__toggle:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.inspection-checklist-item__toggle:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: -3px;
+}
+
+/* -------------------------------- */
+
+/* ⁡⁣⁢⁢Open Accordion Content⁡ */
+.inspection-checklist-item__content {
+  padding: 0 1rem 1rem;
+}
+
+.inspection-checklist-item__content p {
+  margin: 0 0 1rem;
+  line-height: 1.4;
+}
+
+/* -------------------------------- */
+
+/* ⁡⁣⁢⁡⁣⁢⁢Pass / Fail / N/A / Clear Selection⁡*/
+.inspection-result-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  padding: 0;
+  margin: 0 0 1rem;
+
+  border: 0;
+}
+
+.inspection-result-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  cursor: pointer;
+}
+
+.inspection-result-clear {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-primary);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.inspection-result-clear:hover {
+  color: var(--color-primary-hover);
+}
+
+.inspection-result-clear:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+  border-radius: var(--border-radius-small);
+}
+
+.inspection-result-clear:disabled {
+  color: var(--color-text-secondary);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* -------------------------------- */
+
+/* ⁡⁣⁢⁢Checklist Item Notes⁡ */
+.inspection-item-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inspection-item-notes textarea {
+  width: 100%;
+  min-height: 90px;
+  padding: 0.75rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-small);
+
+  resize: vertical;
+
+  font: inherit;
+}
+
+/* -------------------------------- */
+
+/* ⁡⁣⁢⁢Overall Inspection Notes⁡ */
+.inspection-notes-card textarea {
+  width: 100%;
+  min-height: 180px;
+  padding: 0.75rem;
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-small);
+
+  resize: vertical;
+
+  font: inherit;
+}
+
+/* -------------------------------- */
+
+/* ⁡⁣⁢⁢Inspection Summary⁡ */
+.inspection-summary-list {
+  margin: 0;
+}
+
+.inspection-summary-list div {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1rem;
+
+  margin-bottom: 0.5rem;
+}
+
+.inspection-summary-list div:last-child {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.inspection-summary-list dt {
+  font-weight: var(--font-weight-medium);
+}
+
+.inspection-summary-list dd {
+  margin: 0;
+}
+
+/* -------------------------------- */
+
+/* ⁡⁣⁢⁢Actions⁡ */
+.inspection-checklist-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.inspection-save-message {
+  margin: 0;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-success);
+}
+
+/* -------------------------------- */
+
+/* ⁡⁢⁢⁣Media queries⁡ */
+@media (max-width: 600px) {
+  .inspection-checklist-content {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .inspection-information-card,
+  .inspection-checklist-card,
+  .inspection-notes-card,
+  .inspection-summary-card {
+    padding: 1rem;
+  }
+
+  .inspection-result-options {
+    gap: 1rem;
+  }
+
+  .inspection-summary-list div {
+    grid-template-columns: 100px 1fr;
+  }
+
+  .inspection-checklist-actions {
+    flex-direction: column;
+  }
+
+  .inspection-checklist-actions .button {
+    width: 100%;
+    text-align: center;
+  }
+}

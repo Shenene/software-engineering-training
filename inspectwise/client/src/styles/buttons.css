@@ -1,0 +1,92 @@
+/* ⁡⁣⁢⁢Shared button base⁡ */
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-small);
+  box-shadow: var(--shadow-button);
+
+  font: inherit;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.2;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.button:hover {
+  box-shadow: var(--shadow-button-hover);
+}
+
+/* ------------------------------------------ */
+
+/* ⁡⁣⁢⁡⁣⁢⁢Shared interaction states⁡⁡ */
+.button:active {
+  transform: tranlateY(0);
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* ------------------------------------------ */
+
+/* ⁡⁣⁢⁢Primary Button⁡ */
+.button--primary {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+}
+
+.button--primary:hover {
+  border-color: var(--color-primary-hover);
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+}
+
+/* ------------------------------------------ */
+
+/* ⁡⁣⁢⁢Secondary Button⁡ */
+.button--secondary {
+  border-color: var(--color-primary);
+  background-color: var(--color-card-background);
+  color: var(--color-primary);
+}
+
+.button--secondary:hover {
+  background-color: var(--color-sidebar-background);
+  transform: translateY(-2px);
+}
+
+/* ------------------------------------------ */
+
+/* ⁡⁣⁢⁢Button Sizes⁡ */
+
+.button--small {
+  padding: var(--button-padding-small);
+  font-size: var(--button-font-size-small);
+}
+
+.button--medium {
+  padding: var(--button-padding-medium);
+  font-size: var(--button-font-size-medium);
+}
+
+.button--large {
+  padding: var(--button-padding-large);
+  font-size: var(--button-font-size-large);
+}

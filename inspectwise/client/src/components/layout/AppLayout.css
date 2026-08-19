@@ -1,0 +1,103 @@
+.app-layout {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: var(--color-page-background);
+}
+
+.app-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  padding: 2rem;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+}
+
+/* -------------------------------- */
+
+/* ⁡⁣⁢⁢Mobile menu button⁡ */
+.mobile-menu-button {
+  display: none;
+}
+
+/* -------------------------------- */
+
+/* ⁡⁣⁢⁢Mobile overlay⁡ */
+.sidebar-overlay {
+  display: none;
+}
+
+/* -------------------------------- */
+
+/* ⁡⁢⁢⁣Media queries⁡ */
+/* 700px max-width */
+@media (max-width: 700px) {
+  .app-layout {
+    display: block;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .main-content {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  .mobile-menu-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 900;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+    padding: 0;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-small);
+
+    background-color: var(--color-card-background);
+    color: var(--color-primary);
+
+    box-shadow: var(--shadow-button);
+
+    cursor: pointer;
+  }
+
+  .mobile-menu-button i {
+    font-size: 1.5rem;
+  }
+
+  .mobile-menu-button:focus-visible {
+    outline: 3px solid var(--color-focus);
+    outline-offset: 3px;
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 800;
+
+    display: block;
+
+    padding: 0;
+    border: 0;
+
+    background-color: rgba(0, 0, 0, 0.35);
+
+    cursor: pointer;
+  }
+}
