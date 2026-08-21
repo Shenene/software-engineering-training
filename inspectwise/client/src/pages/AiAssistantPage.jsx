@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import PageHeader from "../components/common/PageHeader";
 
-import "../pages/AiAssistantPage.css";
+import "./AiAssistantPage.css";
 
 // ---------------------------------- //
 
@@ -26,7 +26,7 @@ function AiAssistantPage() {
   }
 
   async function handleSendQuestion() {
-    const trimmedQuestion = question.trim();
+    const trimmedQuestion = question.trim().replace(/[ \t]+/g, " ");
 
     if (trimmedQuestion === "") {
       return;
