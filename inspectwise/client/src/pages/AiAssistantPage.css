@@ -242,6 +242,7 @@
 /* -------------------------------- */
 
 /* ⁡⁢⁢⁣Media queries⁡ */
+/* 600px max-width */
 @media (max-width: 600px) {
   .ai-assistant-content {
     gap: 1rem;
