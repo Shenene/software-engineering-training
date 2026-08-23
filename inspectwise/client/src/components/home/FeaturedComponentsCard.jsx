@@ -19,7 +19,7 @@ function FeaturedComponentsCard() {
       <ul className="featured-components-card__list">
         {featuredComponents.map((component) => (
           <li key={component.id}>
-            <Link className="featured-components-card__link" to={`/explorer/${component.id}`}>
+            <Link className="featured-components-card__link" to={`/explorer?stage=${encodeURIComponent(component.stages[0])}&component=${component.id}`}>
               {component.name}
             </Link>
           </li>
