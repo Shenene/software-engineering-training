@@ -7,6 +7,7 @@
 import express from "express";
 import "dotenv/config";
 import sequelize from "./config/database.js";
+import Earthquake from "./models/Earthquake.js";
 
 // ----------------------------------------------------- //
 
@@ -27,8 +28,10 @@ app.get("/", (req, res) => {
 const startServer = async () => {
   try {
     await sequelize.authenticate();
-
     console.log("Connected to MySQL successfully.");
+
+    await Earthquake.sync();
+    console.log("Earthquakes table ready.");
 
     // -------------------------------------------
 
