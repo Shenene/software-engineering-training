@@ -6,8 +6,10 @@
 
 import express from "express";
 import "dotenv/config";
+
 import sequelize from "./config/database.js";
 import Earthquake from "./models/Earthquake.js";
+import earthquakeRoutes from "./routes/earthquakeRoutes.js";
 
 // ----------------------------------------------------- //
 
@@ -24,6 +26,10 @@ app.get("/", (req, res) => {
     message: "Quakelog NZ API is running",
   });
 });
+
+app.use("/api/earthquakes", earthquakeRoutes);
+
+// -------------------------------------------
 
 const startServer = async () => {
   try {
