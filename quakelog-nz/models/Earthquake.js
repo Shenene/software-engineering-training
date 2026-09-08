@@ -77,7 +77,7 @@ const Earthquake = sequelize.define(
   },
   {
     tableName: "earthquakes",
-    timeStamps: true,
+    timestamps: true,
   },
 );
 
